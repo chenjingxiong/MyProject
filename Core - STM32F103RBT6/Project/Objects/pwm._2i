@@ -1,0 +1,6 @@
+-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I..\Project -I..\Libraries\CMSIS\CM3\CoreSupport -I..\Libraries\CMSIS\CM3\DeviceSupport -I..\Libraries\CMSIS\CM3\DeviceSupport\startup -I..\Libraries\STM32F10x_StdPeriph_Driver -I..\Libraries\STM32F10x_StdPeriph_Driver\inc -I..\Device -I..\API
+-I E:\项目\STM32--寻迹小车\软件\Project\RTE
+-I d:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.0.0
+-I d:\Keil_v5\ARM\CMSIS\Include
+-D__UVISION_VERSION="514" -DSTM32F10X_MD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_MD
+-o .\objects\pwm.o --omf_browse .\objects\pwm.crf --depend .\objects\pwm.d --feedback ".\Objects\STM32.fed" "..\API\PWM.c"
