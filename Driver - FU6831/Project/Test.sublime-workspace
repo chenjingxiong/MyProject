@@ -1,0 +1,835 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"SPI",
+				"SPIInf"
+			],
+			[
+				"uin",
+				"uint8_t"
+			],
+			[
+				"uint",
+				"uint8_t"
+			],
+			[
+				"int",
+				"int32_t"
+			],
+			[
+				"REF",
+				"REFPID"
+			],
+			[
+				"ifd",
+				"ifd	#if defined"
+			],
+			[
+				"FOC_D",
+				"FOC_DMAX"
+			],
+			[
+				"FOC",
+				"FOC_IA"
+			],
+			[
+				"AMP",
+				"AMP_RES1"
+			],
+			[
+				"RU",
+				"RunCmd_udq"
+			],
+			[
+				"V",
+				"Value"
+			],
+			[
+				"CMD_",
+				"CMD_SP"
+			],
+			[
+				"UI",
+				"UICoreCmdType"
+			],
+			[
+				"UIC",
+				"UICore"
+			],
+			[
+				"UICORE_",
+				"UICORE_CMD_LEN"
+			],
+			[
+				"FOC_I",
+				"FOC_IQREF"
+			],
+			[
+				"IB",
+				"IBusUpdata"
+			],
+			[
+				"DMA",
+				"DMANormal"
+			],
+			[
+				"Init",
+				"Init_DEBUG_DMA"
+			],
+			[
+				"UART",
+				"UART_SP"
+			],
+			[
+				"De",
+				"Deal_tmp"
+			],
+			[
+				"d",
+				"detial"
+			],
+			[
+				"UART_",
+				"UART_R_Buff"
+			],
+			[
+				"UA",
+				"UART_R_Buff"
+			],
+			[
+				"send",
+				"send_Byte_UART"
+			],
+			[
+				"Lib",
+				"Library"
+			],
+			[
+				"Inc",
+				"include"
+			],
+			[
+				"de",
+				"Detail"
+			],
+			[
+				"Res",
+				"Res_1"
+			],
+			[
+				"D",
+				"Dat"
+			],
+			[
+				"uitn",
+				"uint8_t"
+			],
+			[
+				"ADC",
+				"ADC_Buff"
+			],
+			[
+				"ADC_",
+				"ADC_BUSY"
+			],
+			[
+				"un",
+				"uint8_t"
+			],
+			[
+				"Buff",
+				"BuffSP"
+			],
+			[
+				"DRV",
+				"DRV_CMR"
+			],
+			[
+				"xifen",
+				"xifen_value"
+			],
+			[
+				"In",
+				"interrupt"
+			],
+			[
+				"FOC_",
+				"FOC_RTHESTEP"
+			],
+			[
+				"0x",
+				"0xf33f"
+			],
+			[
+				"DRV_",
+				"DRV_CMR"
+			],
+			[
+				"Ua",
+				"Ualpha"
+			],
+			[
+				"tmp",
+				"tmpy"
+			],
+			[
+				"TES",
+				"TEST_SFR"
+			],
+			[
+				"TEST",
+				"TEST_CNTR"
+			],
+			[
+				"switch",
+				"switch_CTimer"
+			],
+			[
+				"TIM",
+				"TIMXIP"
+			],
+			[
+				"TEST_",
+				"TEST_IP"
+			],
+			[
+				"zero",
+				"zero_angle"
+			],
+			[
+				"e",
+				"electrical"
+			],
+			[
+				"sec",
+				"SECTOR34_K"
+			],
+			[
+				"sect",
+				"SECTOR4"
+			],
+			[
+				"SEC",
+				"SECTOR2"
+			],
+			[
+				"set",
+				"set_angle"
+			],
+			[
+				"error",
+				"error_angle"
+			],
+			[
+				"adc",
+				"adcdat"
+			],
+			[
+				"speed",
+				"speed100"
+			],
+			[
+				"Sli",
+				"SlideBuff"
+			],
+			[
+				"q",
+				"q_dat"
+			],
+			[
+				"Dis",
+				"Display_Gyro"
+			],
+			[
+				"time",
+				"time10ms"
+			],
+			[
+				"Lo",
+				"LockNum"
+			],
+			[
+				"gy",
+				"Gyro"
+			],
+			[
+				"irq",
+				"irq_SPI"
+			],
+			[
+				"main",
+				"main10ms"
+			],
+			[
+				"Updata",
+				"Updata_Angle_PID"
+			],
+			[
+				"0f",
+				"0xff"
+			],
+			[
+				"Angle",
+				"AngleTmp"
+			],
+			[
+				"Init_",
+				"Init_SV"
+			],
+			[
+				"o",
+				"offset_acc"
+			],
+			[
+				"sta",
+				"statu_gyr"
+			],
+			[
+				"Get",
+				"Get_Data"
+			],
+			[
+				"a13",
+				"a13_1"
+			],
+			[
+				"pit",
+				"pit_1"
+			],
+			[
+				"DIS",
+				"DISMODE"
+			],
+			[
+				"Se",
+				"Send_SI2C"
+			],
+			[
+				"St",
+				"Start_SI2C"
+			],
+			[
+				"c",
+				"colu"
+			],
+			[
+				"Write_",
+				"Write_Byte_I2C"
+			],
+			[
+				"W",
+				"Write_I2C"
+			],
+			[
+				"Wri",
+				"Write_Bit_I2C"
+			],
+			[
+				"Write",
+				"Write_I2C"
+			],
+			[
+				"catch",
+				"catch_time"
+			],
+			[
+				"inc",
+				"inc	#include \"…\""
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"last_filter": "package Control: i",
+		"selected_items":
+		[
+			[
+				"package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: r",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #ifndef … #define … #endif"
+			],
+			[
+				"cool",
+				"CoolFormat: Formatter Settings"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"sum",
+				"Sublimall: Upload"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 270.0,
+		"history":
+		[
+			"run",
+			"cmd",
+			"sublime.help()",
+			"sublime.help",
+			"help",
+			"/?",
+			"set_build_system",
+			"sublime.version()",
+			"sumlime.version()",
+			"help",
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Any/FU68xxLib",
+		"/D/Any/项目/FOC云台/程序"
+	],
+	"file_history":
+	[
+		"/D/Any/FU6802Lib/Lib/Outside/UICore.c",
+		"/D/Any/项目/模板TM4C/project/Main1.c",
+		"/D/Any/项目/模板TM4C/Lib/driverlib/ssi.c",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/keilkilll.bat",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/Interrupt.h",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/Interrupt.c",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_FOC.h",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/PTZ.c",
+		"/D/Any/FU6802Lib/Lib/Other/FU6802_Config.h",
+		"/D/Any/FU6802Lib/Lib/Outside/UIUser.c",
+		"/D/Any/FU6802Lib/Lib/Outside/UIUser.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_DRV.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_DMA.c",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_PI.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_DMA.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_CMP.h",
+		"/D/Any/FU6802Lib/Lib/Other/FU6802_MCU.h",
+		"/D/Any/FU6802Lib/Lib/Outside/UICore.h",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/User/head_c.sublime-snippet",
+		"/E/KeilC/C51/LIB/GETKEY.C",
+		"/D/Any/repository/Driver/UICore.c",
+		"/D/Any/FU6802Lib/Lib/FU6802_DMA.h",
+		"/D/Any/FU6802Lib/Lib/FU6802_DMA.c",
+		"/D/Any/FU6802Lib/Lib/Other/Fu6802_Type.h",
+		"/D/Any/资料/FU6802/Fu681x_MC+V0.01+20170307A(+demo+sensorless) - 副本/Fu681x_MC V0.01 20170307A( demo sensorless)/Fu68xx_MC.BAT",
+		"/D/Any/资料/FU6802/Fu681x_MC+V0.01+20170307A(+demo+sensorless) - 副本/Fu681x_MC V0.01 20170307A( demo sensorless)/MC.BAT",
+		"/D/Any/资料/FU6802/Fu681x_MC+V0.01+20170307A(+demo+sensorless) - 副本/Fu681x_MC V0.01 20170307A( demo sensorless)/obj/Ftech_BLDC.SBR",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/User/C51.sublime-build",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/Target 1.BAT",
+		"/D/Any/资料/FU6802/Fu681x_MC+V0.01+20170307A(+demo+sensorless) - 副本/Fu681x_MC V0.01 20170307A( demo sensorless)/obj/Ftech_BLDC.lnp",
+		"/D/Any/资料/FU6802/Fu681x_MC+V0.01+20170307A(+demo+sensorless) - 副本/Fu681x_MC V0.01 20170307A( demo sensorless)/obj/fu681x_cmp.__i",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/Objects/Test.lnp",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/Objects/PTZ.obj",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/Objects/Test",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/User/Preferences.sublime-settings",
+		"/D/Any/资料/FU6802/Fu681x_MC+V0.01+20170307A(+demo+sensorless)/Fu681x_MC V0.01 20170307A( demo sensorless)/Fu68xx_MC.BAT",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/Compare Side-By-Side/SBSCompare.sublime-settings",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Any/Desktop/Any.rdp",
+		"/D/Any/FU6802Lib/Driver/SinCos.c",
+		"/D/Any/FU6802Lib/Driver/SinCos.h",
+		"/D/Any/资料/FU6812_demoweizhenGAIPI/FU6812_demoweizhenGAIPI/User/Source/Function/SinCos.c",
+		"/D/Any/FU6802Lib/Driver/FastMath.c",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_IRQControl.H",
+		"/C/Program Files/WinRAR/rarreg.key",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_UART.c",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_IRQControl.c",
+		"/D/Any/FU6802Lib/Lib/Other/FU6802_SFR.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_GPIO.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_CTimer.c",
+		"/C/Users/Any/AppData/Local/Temp/Rar$DIa0.996/FU6802_DMA.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_SPI.H",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_ADC.H",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_ADC.c",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_CTimer.h",
+		"/D/Any/资料/FU6802/C51/2017-02-09+TIM2/Interrupt.c",
+		"/C/Users/Any/Desktop/tmp.c",
+		"/Z/03 研发测试/08 MCU测试验证/05 FTC6802W/测试内容/C51/README.md",
+		"/D/Any/资料/FU6802/C51/2017-03-01+步进电机/PTZ - 6831从机.c",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/User/SublimeLinter.sublime-settings",
+		"/D/Any/FU6802Lib/Lib/Outside/FU68xx_GPIO.c",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_SPI.c",
+		"/D/Any/资料/FU6802/C51/README.md",
+		"/D/Any/资料/FU6802/C51/2017-02-09+外挂Debug/Interrupt.c",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_I2C.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_FOC.c",
+		"/D/Any/项目/云台/蔓塔单轴云台 - 20161201 - 开环版 - 发布/Include/Delay.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_SPI.c",
+		"/D/Any/FU6802Lib/Lib/Outside/FU6802_UART.h",
+		"/D/Any/资料/FU6802/C51/2016-12-22+DMA/Interrupt.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_UART.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_UART.h",
+		"/D/Any/FU6802Lib/Lib/Other/XREG.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU68xx_Flash.c",
+		"/D/Any/资料/FU6802/C51/2016-12-22+DMA/Interrupt.h",
+		"/D/Any/资料/FU6802/C51/2016-12-22+DMA/Result/Test_Result.txt",
+		"/D/Any/FU6802Lib/Lib/Outside/FU68xx_CTimer.h",
+		"/D/Any/FU6802Lib/Lib/Outside/FU68xx_CTimer.c",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/CoolFormat/CoolFormatLib/CoolFormatConfig.cfconfig",
+		"/D/Any/资料/FU6802/C51/2016-12-15+GPIO/test.sublime-project",
+		"/C/Users/Any/Desktop/~WRL0001.tmp",
+		"/D/Any/资料/FU6802/C51/2016-12-15+TIM34/Result/Test_Result.txt",
+		"/D/Any/资料/FU6802/C51/2016-12-15+TIM34/Result/测试数据.xlsx",
+		"/D/Any/资料/FU6802/C51/2016-12-15+TIM34/Result/正反相测试.jpg",
+		"/D/Any/资料/FU6802/C51/2016-12-15+TIM34/Test_Result.txt",
+		"/D/Any/资料/FU6802/C51/2016-12-15+GPIO/PTZ.c",
+		"/D/Any/FU68xxLib/Lib/Other/FU68xx_MCU.h",
+		"/D/Any/调试/FU6818Q_HTOL-18V/FU68XX_HTOL - 测试 - 2015082416 - 30V/FU68XX_CeilingFan - 测试 - 20150824 - 30V/User/Source/Application/AddFunction.c",
+		"/D/Any/资料/FU6802/C51/2016-12-15+验证下载MDU/云台.sublime-project",
+		"/D/Any/FU68xxLib/Driver/FU68xx_Soft_SPWM.h",
+		"/D/Any/FU68xxLib/Driver/FU68xx_Soft_SPWM.c",
+		"/D/Any/资料/FU6802/C51/2016-12-15+测试下载功能（GPIO&MDU)/Something.c",
+		"/D/Any/资料/FU6802/C51/2016-12-15+测试下载功能（GPIO&MDU)/Something.h",
+		"/D/Any/项目/云台/FU68XX_CeilingFan -线性hall - 20161103 - Any/FU68XX_CeilingFan -线性hall - 20161103 - Any/FU68XX_CeilingFan -线性hall - 20161102 - Any/User/Source/Function/FocControl.c",
+		"/D/Any/项目/云台/FU68XX_CeilingFan -线性hall - 20161103 - Any/FU68XX_CeilingFan -线性hall - 20161103 - Any/FU68XX_CeilingFan -线性hall - 20161102 - Any/User/Include/FocControl.h",
+		"/D/Any/repository/API/PID.h",
+		"/D/Any/repository/API/PID.c",
+		"/D/Any/项目/云台/蔓塔单轴云台 - 20161121/Something.c",
+		"/D/Any/项目/云台/蔓塔单轴云台 - 20161121/Something.h",
+		"/D/Any/repository/Driver/SoftWare_I2C.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/Something - 副本.c",
+		"/D/Any/资料/FT8201/第一代芯片的IIC驱动/ft6801_i2c_master20160306v1--kangyuan1/Library/FT68xx_Hardware_Driver/Include/Customer.h",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/User/Default (Windows).sublime-keymap",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/Alignment/Default (Windows).sublime-keymap",
+		"/D/Any/资料/FT8201/ft6801_i2c_master20160901-finalversion/ft6801_i2c_master20160830v1-heisenanqidong/Library/FT68xx_Hardware_Driver/Include/Customer.h",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/Alignment/Base File.sublime-settings",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/User/C.sublime-settings",
+		"/C/Users/Any/Documents/ANO_TC/ANO_DT.c",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/User/SublimeAStyleFormatter.sublime-settings",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/User/Localization.sublime-settings",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/SublimeAStyleFormatter/SublimeAStyleFormatter.sublime-settings",
+		"/C/Program Files (x86)/Sublime Text 3/Data/Packages/SublimeAStyleFormatter/Default (Windows).sublime-keymap",
+		"/D/Any/repository/Driver/DMP.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/TestDmp - DMP + SPWM.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/main.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_CTimer.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/Something.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_IRQControl.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/Something.h",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/IMU.c",
+		"/D/Any/项目/云台/Firmware-master/Firmware-master/src/sys/itoa.c",
+		"/D/Any/项目/云台/Firmware-master/Firmware-master/src/main.c",
+		"/D/Any/项目/云台/Firmware-master/Firmware-master/src/sys/printf.c",
+		"/D/Any/项目/云台/Firmware-master/Firmware-master/Makefile",
+		"/D/Any/项目/云台/Firmware-master/Firmware-master/history.md",
+		"/D/Any/项目/云台/Firmware-master/Firmware-master/README.md",
+		"/D/Any/项目/云台/Firmware-master/Firmware-master/.gitignore",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/云台.sublime-project"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"*.c,*.h,<open folders>",
+			"*.c;*.h",
+			"<open folders>*.c;*.h",
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"Statu",
+			"BinFlag",
+			"StartFlag",
+			"CHECK",
+			"PARAValid",
+			"CMDValid",
+			"_SP",
+			"CMD_SP",
+			"RunCmd_clrpi",
+			"IStep",
+			"UICoreCmd",
+			"Valid",
+			"UART_RECEIVE_CMD",
+			"UART_SP",
+			"UICore_Receive_End",
+			"ReceiveEnd",
+			"DMADeXSFR",
+			"\n    ",
+			"^*(void)+(.+)(?=\\()",
+			"IStep",
+			"Quadrant",
+			"uint8",
+			"int16",
+			"IStep",
+			"EN_ADC",
+			"EA",
+			");\n",
+			"unsigned char",
+			"2",
+			"0010",
+			"DRV_UHE",
+			"++;\n",
+			"SPI",
+			"angle",
+			"zero_angle",
+			"e_angle",
+			"actual_angle",
+			"Buff->",
+			"//Log\n//Timer         Writer      Thing                               Ver\n//2016-11-03    Any         完成功能：四元数、角速度的\n//                                    读取、处理和\n//                                    欧拉角、角速度的串口输出  V1.0\n//2016-11-03    Any         增加数据显示的条件编译              V1.1\n//\n\n#include <Something.h>\n#include <math.h>\n#include <Union.h>\n#include <FU68xx_GPIO.h>\n#include <FU68xx_UART.h>\n#include <FU68xx_ADC.h>\n#include <PID.h>\n#include <FU68xx_Soft_SPWM.h>\n/************************************************************************************/\n#define q30 1073741823.0f\n#define G_LSB 131.0f\n/************************************************************************************/\nstatic idata float q[4] = {1.0f, 0.0f, 0.0f, 0.0f};\nstatic data float qpit;\n\nidata float Angle[3];\nidata float Gyro[3];\n\nidata float APID;\nidata float GPID;\n\nbool SendLock;\ndata char num;\ndata union UART_Send_Packet\n{\n    unsigned char dat[21];\n    struct \n    {\n        short head;\n        char  type;\n        char  numb;\n        union\n        {\n            unsigned long ul[4];\n            unsigned short ui[8];\n            long l[4];\n            short i[8];\n        }dat;\n        char  check;\n    }details;\n}USendBuff; \n\ndata union UART_Receive_Packet\n{\n    unsigned char dat[7];\n    struct\n    {\n        short head;\n        char type;\n        char numb;\n        short dat;\n        char check;\n    }details;\n}UARTReceiveBuff;\n\n/************************************************************************************/\n#define ADCBUFF 14\ndata unsigned short Buff[2];\nvoid Deal_GData(void)\n{\n    static data struct \n    {   \n        char index;\n        short buff[]\n    };\n    static data unsigned char j;\n    static data unsigned short adcbuff[ADCBUFF] = { 0 };\n    static data unsigned short adclast;\n\n    data unsigned char i;\n    data unsigned short adctmp;\n    \n    \n    ADCSTA |= 0x40;\n    while ((ADCSTA & 0x40) == 0x40);\n\n    adcbuff[j] = ADCDR0;\n    if (++j == ADCBUFF) j = 0;\n\n    adctmp = 0;\n    for (i=0; i!=ADCBUFF; i++) adctmp += adcbuff[i];\n\n    adctmp /= ADCBUFF;\n    Buff[0] = adctmp - adclast;\n    adclast = adctmp;\n    Display_Data(0xf3, Buff, 2, 0);\n\n    // Increment_PID(APID, Gyro[0], &GPID);//APID\n    // Updata_Soft_SPWM(GPID);\n}\n\n#if defined(SEND_D)\n    void Display_Data(char type, void* dat, char len, char data_mode)\n    {\n        data char i;\n        data unsigned short* k;\n        data unsigned long* l;\n\n        while (SendLock);\n\n        USendBuff.details.head = 0xaaaa;\n        USendBuff.details.type = type;\n        USendBuff.details.check = 0x54;\n        \n        if (data_mode == 0)\n        {\n            k = dat;\n            if (len > 8) len = 8;\n            USendBuff.details.numb = len * 2;\n            for (i=0; i!=len; i++) USendBuff.details.dat.i[i] = k[i]; \n        }\n        else if (data_mode == 1)\n        {\n            l = dat;\n            if (len > 4) len = 4;\n            USendBuff.details.numb = len * 4;\n            for (i=0; i!=len; i++) USendBuff.details.dat.l[i] = l[i]; \n        }\n        \n        num = 4 + USendBuff.details.numb;\n        \n        for (i=2; i!=num; i++) USendBuff.details.check += USendBuff.dat[i];\n        \n        num++;\n            \n        SendLock = true;\n        TI = 1;\n    }\n#endif\n\nvoid UART_irq(void) interrupt 12\n{\n    static data unsigned char Scount;\n    static data unsigned char Rcount;\n    static data unsigned char verify;\n    data unsigned char Utmp;\n\n    bool StartRx;\n    if (RI)\n    {\n        Utmp = UTDR;\n\n        if (Utmp == 0xaa) StartRx = true;\n\n        if (StartRx)\n        {\n            UARTReceiveBuff.dat[Rcount] = Utmp;\n            if (Rcount < 6) verify += UARTReceiveBuff.dat[Rcount];\n            if (++Rcount == 7)\n            {\n                if (UARTReceiveBuff.details.head == 0xaaaf && UARTReceiveBuff.details.check == verify)\n                {\n                    StartRx = false;\n                    verify = 0;\n                    Buff[1] = (unsigned short)UARTReceiveBuff.details.dat;\n                    Rcount = 0;\n                }\n            }\n        }\n        \n        RI = 0;\n    }\n    if (TI)\n    {\n        if (Scount != num)\n        {\n            P25 = 1;\n            if (Scount == num - 1) UTDR = USendBuff.details.check;\n            else                   UTDR = USendBuff.dat[Scount];\n            Scount++;  \n        }\n        else\n        {\n            Scount = 0;\n            SendLock = false;       \n            P25 = 0;\n        }\n        TI = 0;\n    }\n}\n\n",
+			";\n",
+			"StartRx",
+			"USendBuff1",
+			"USendBuff2",
+			"TypeNum",
+			"Buff[count-2] = tmp",
+			"Buff",
+			"scl = 0",
+			"sda = 0",
+			"scl = 1",
+			"sda = 1",
+			"50ms",
+			"GYRO_YOUT_H",
+			"return Get_ACK_SI2C();",
+			"if(ack) return 0;",
+			"i2creads(",
+			"readBit",
+			"readBits(",
+			"writeBits(",
+			"writeBit(",
+			"i2cread(",
+			"i2cwrite(",
+			"SlaveAddress",
+			"i2_fs",
+			"i2_tz",
+			"i2_qs",
+			"Start_SI2C",
+			"SendByte",
+			"readBits(",
+			"readBit(",
+			"writeBits(",
+			"readBits(",
+			"readBit(",
+			"i2cread(",
+			"i2cwrite(",
+			"writeBit(",
+			"0x38",
+			"0x1c",
+			"0x1b",
+			"0x6B",
+			"0x68",
+			"U16",
+			"U8",
+			"U16",
+			"U8",
+			"tab",
+			"Queue",
+			"UIReceiveStatu_Complete",
+			"UIReceiveStatu_Receive",
+			"U8",
+			"WOUTMAX",
+			"OMELPF",
+			"EKLPFMIN",
+			"OBS_K1T",
+			"------------------------------------------------------------------*/",
+			"OBS_K1T",
+			"OBS_K1TINPUT"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"if (Get_ACK_SI2C()) return 0;",
+			"return Get_ACK_SI2C();",
+			"Read_Str_SI2C(Addr, ",
+			"Read_Bit_SI2C(Addr, ",
+			"Read_Bits_SI2C(Addr, ",
+			"Write_Bits_SI2C(Addr, ",
+			"Write_Bit_SI2C(Addr, ",
+			"Read_Byte_SI2C(Addr, ",
+			"Write_Byte_SI2C(Addr, ",
+			"Addr",
+			"Send_SI2C",
+			"Stop_SI2C",
+			"Start_SI2C",
+			"i2_qs",
+			"Read_Bits_I2C(Addr, ",
+			"Read_Bit_I2C(Addr, ",
+			"Write_Bits_I2C(Addr, ",
+			"Read_Bits_I2C(Addr, ",
+			"Read_Bit_I2C(Addr, ",
+			"Read_Byte_I2C(Addr, ",
+			"Write_Byte_I2C(Addr, ",
+			"Write_Bit_I2C(Addr, ",
+			"INT_CFG",
+			"ACC_CFG",
+			"GYRO_CFG",
+			"PWR1",
+			"unsigned short",
+			"unsigned char",
+			"unsigned short",
+			"unsigned char",
+			"FL_UIReceive_Complete",
+			"FL_UIReceive_Receive",
+			"unsigned char"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"folders":
+	[
+		{
+			"path": "D:\\Any\\FU68xxLib"
+		},
+		{
+			"path": "D:\\Any\\项目\\FOC云台\\程序"
+		}
+	],
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 110.0
+	},
+	"pinned_build_system": "",
+	"project": "",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 206.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
