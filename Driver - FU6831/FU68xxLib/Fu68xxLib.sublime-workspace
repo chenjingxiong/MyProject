@@ -1,0 +1,690 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"SPI",
+				"SPICFG"
+			],
+			[
+				"SPIC",
+				"SPICTL"
+			],
+			[
+				"Fall",
+				"FallTx"
+			],
+			[
+				"Se",
+				"Send_SI2C"
+			],
+			[
+				"St",
+				"Start_SI2C"
+			],
+			[
+				"c",
+				"colu"
+			],
+			[
+				"Write_",
+				"Write_Byte_I2C"
+			],
+			[
+				"W",
+				"Write_I2C"
+			],
+			[
+				"Wri",
+				"Write_Bit_I2C"
+			],
+			[
+				"Write",
+				"Write_I2C"
+			],
+			[
+				"catch",
+				"catch_time"
+			],
+			[
+				"inc",
+				"inc	#include \"…\""
+			],
+			[
+				"UIC",
+				"UICoreDataQueue"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "//////////////////////////////////////////////////////////////////////\n//文件名：FU68xx_UART.c                                             //\n//说明：FU68系列芯片的UART底层驱动                                  //\n//Log                                                               //\n//Timer         Writer      Thing                               Ver //\n//2016-08-01    Any         创建文件                            V1.0//\n//2016-08-01    Any         在资源满足条件下尽可以使用printf    V1.1//\n//2016-09-09    Any         修改端口复用的赋值方式              V1.2//\n//2016-09-23    Any         还原变量类型名，更新注释形式        V1.3//\n//2016-12-14    Any         初始化无需计算寄存器值直接填波特率  V1.4//\n//////////////////////////////////////////////////////////////////////\n\n#include <FU68xx_UART.h>\n#include <FU68xx_GPIO.h>\n#include <FU68xx_Config.h>\n\n/**\n * [Init_UART description]\n *\n * @function 配置串口\n * @date     2016-12-14\n * @Version  V1.1\n *\n * @param    addr       [串口号]\n * @param    mode       [模式]\n * @param    receive    [是否接收]\n * @param    bund       [波特率]\n * @param    irq        [是否中断]\n */\nvoid Init_UART(unsigned char addr, unsigned char mode, bool receive, unsigned long bund, bool irq)\n{\n    unsigned char dat = ((unsigned char)receive << 4);\n    UTCR  = mode | ((unsigned char)receive << 4) | 0x20;\n    UTBU = FREC16 / bund - 1;\n    \n    if (irq) ES = 1;\n    else     ES = 0;\n    \n    if (addr == 0)      PHSEL |= 0x20;\n    else if (addr == 1) PHSEL |= 0x40;\n}    \n \n/**\n * [send_UART description]\n *\n * @function 发送字符串\n * @date     2016-08-01\n * @Version  V1.0\n *\n * @param    str        [字符串所在地址]\n * @param    Size       [字符串长度]\n */\nvoid send_UART(unsigned char* str, unsigned char Size)\n{\n    unsigned char i = 0;\n    \n    while (i < Size)\n    {\n        while (!TI);\n        UTDR = *str;\n        i++;\n        str++;\n        TI = 0;\n    }\n}\n\n/**\n * [send_Byte_UART description]\n *\n * @function 发送字符\n * @date     2016-08-01\n * @Version  V1.0\n *\n * @param    dat        [字符值]\n */\nvoid send_Byte_UART(unsigned char dat)\n{\n    while (!TI);\n    UTDR = dat;\n    TI = 0;\n}\n",
+			"file": "Lib/Outside/FU68xx_UART.c",
+			"file_size": 2219,
+			"file_write_time": 131261739454934404,
+			"settings":
+			{
+				"buffer_size": 2019,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "//文件名：FU68xx_CTimer2.c\n//说明：FU68系列芯片的通用定时器底层驱动\n//Log\n//Timer 		Writer      Thing                                             Ver\n//2016-07-31	Any			创建文件                                          V1.0\n//2016-07-31	Any			将每个定时器单独写成一个文件                      V1.1\n//2016-08-01    Any         使用宏定义拆分定时器                              V1.2\n//2016-09-09    Any         增加对输入模式IO口的复用处理，修改注释格式        V1.3\n//2016-09-22    Any         将定时器操作合并                                  V2.0\n//2016-09-23    Any         还原变量类型名称，去掉Type.h                      V2.1\n\n#include <FU68xx_CTimer.h>\n#include <FU68xx_GPIO.h>\n\nunsigned char code phsel[4] = {0x04, 0x08, 0x10, 0x02};\n/**\n * [Init_CTimer description]\n *\n * @function  初始化普通定时器\n * @date      2016-09-22\n * @Version   V1.0\n *\n * @param     num        [定时器号]\n * @param     cr0        [CR0的值]\n * @param     cr1        [CR1的值]\n * @param     arr        [ARR的值]\n * @param     dr         [DR的值]\n */\nvoid Init_CTimer(unsigned char num, unsigned char cr0, unsigned char cr1, unsigned short arr, unsigned short dr)\n{\n    switch (num)\n    {\n        case 2: TIM2CR0 = cr0; TIM2CR1 = cr1; TIM2ARR = arr; TIM2DR = dr; break;\n        case 3: TIM3CR0 = cr0; TIM3CR1 = cr1; TIM3ARR = arr; TIM3DR = dr; break;\n        case 4: TIM4CR0 = cr0; TIM4CR1 = cr1; TIM4ARR = arr; TIM4DR = dr; break;\n        case 5: TIM5CR0 = cr0; TIM5CR1 = cr1; TIM5ARR = arr; TIM5DR = dr; break;\n\n    }\n    \n    if ((cr0 & 0x01) == 0x01) PHSEL &= ~phsel[num - 2];\n    else                      PHSEL |=  phsel[num - 2];\n}\n\n/**\n * [switch_CTimer description]\n *\n * @function  开关定时器\n * @date      2016-09-22\n * @Version   V1.0\n *\n * @param     num        [定时器号]\n * @param     sw         [开关指令]\n */\nvoid switch_CTimer(unsigned char num, bool sw)\n{\n    switch (num)\n    {\n        case 2: \n            if (sw) TIM2CR1 |= TIMXCEN;\n            else    TIM2CR1 &= ~TIMXCEN;\n        break;\n        \n        case 3: \n            if (sw) TIM3CR1 |= TIMXCEN;\n            else    TIM3CR1 &= ~TIMXCEN;\n        break;\n        \n        case 4: \n            if (sw) TIM4CR1 |= TIMXCEN;\n            else    TIM4CR1 &= ~TIMXCEN;\n        break;\n        \n        case 5: \n            if (sw) TIM5CR1 |= TIMXCEN;\n            else    TIM5CR1 &= ~TIMXCEN;\n        break;        \n    }\n}\n\n/**\n * [irq_CTimer description]\n *\n * @function  定时器中断编号\n * @date      2016-09-22\n * @Version   V1.0\n *\n * @requires\n *\n * @reference\n *\n * @param     num        [定时器号]\n * @return     0         [无中断]\n * @return     1         [溢出中断]\n * @return     2         [输入中断]\n * @return     4         [匹配中断]\n */\nchar irq_CTimer(unsigned char num)\n{\n    char value = 0;\n        \n    switch (num)\n    {\n        case 2: \n            if ((TIM2CR1 & TIMXIF) == TIMXIF) value += 1;\n            if ((TIM2CR1 & TIMXIP) == TIMXIP) value += 2;\n            if ((TIM2CR1 & TIMXIR) == TIMXIR) value += 4;\n            TIM2CR1 &= ~0xe0;\n        break;\n        case 3: \n            if ((TIM3CR1 & TIMXIF) == TIMXIF) value += 1;\n            if ((TIM3CR1 & TIMXIP) == TIMXIP) value += 2;\n            if ((TIM3CR1 & TIMXIR) == TIMXIR) value += 4;\n            TIM3CR1 &= ~0xe0;\n        break;\n        case 4: \n            if ((TIM4CR1 & TIMXIF) == TIMXIF) value += 1;\n            if ((TIM4CR1 & TIMXIP) == TIMXIP) value += 2;\n            if ((TIM4CR1 & TIMXIR) == TIMXIR) value += 4;\n            TIM4CR1 &= ~0xe0;\n        break;\n        case 5: \n            if ((TIM5CR1 & TIMXIF) == TIMXIF) value += 1;\n            if ((TIM5CR1 & TIMXIP) == TIMXIP) value += 2;\n            if ((TIM5CR1 & TIMXIR) == TIMXIR) value += 4;\n            TIM5CR1 &= ~0xe0;\n        break;\n    }\n    \n    return value;\n}\n",
+			"file": "Lib/Outside/FU68xx_CTimer.c",
+			"file_size": 3896,
+			"file_write_time": 131193497418035991,
+			"settings":
+			{
+				"buffer_size": 3619,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "//////////////////////////////////////////////////////////////////////\n//文件名：FU68xx_SPI.c                                              //\n//说明：FU68系列芯片的SPI底层驱动                                   //\n//Log                                                               //\n//Timer         Writer      Thing                               Ver //\n//2016-10-08    Any         创建文件                            V1.0//\n//2016-11-03    Any         SPI一些配置使用宏条件                   //\n//                          收发函数合并                        V1.1//\n//////////////////////////////////////////////////////////////////////\n\n#include <FU68xx_SPI.h>\n#include <FU68xx_GPIO.h>\n#include <FU68xx_Config.h>\n\n\n#if defined(Hight) && defined(Low)\n#error Who is the real enable signal?\n#endif\n\n#if defined(RisingTx) && defined(RisingRx)\n#error What to do on the rising edge?\n#endif\n\n#if defined(Line4) && defined(Line3)\n#error Who is the real line mode?\n#endif\n\n#if defined(MASTER) && defined(SLAVE)\n#error Master or slaver?\n#endif\n\n/**\n * 选通信号控制\n *\n * @Writer  Any\n * @Version V1.1\n * @Date    2016-12-19\n *\n * @param   NSS        选通信号\n */\nvoid NssCtl_SPI(bool NSS)\n{\n    if ((SPICTL & L3) != L3)\n    {\n        if ((SPICFG & FreeH) == FreeH) NSS = !NSS;\n\n        if (NSS) SPICTL |=  0x04;\n        else     SPICTL &= ~0x04;\n    }\n}\n\n/**\n * 初始化SPI\n *\n * @Writer  Any\n * @Version V1.2\n * @Date    2016-12-19\n *\n * @param   Line_Mode  SPI线制 L3: 三线制    L4: 四线从机/多主    L4_Signal: 四线单主\n * @param   Config     SPICFG配置\n * @param   SPEED      SPI时钟频率\n * @param   EnIrq      中断使能 true: 使能    false: 禁能\n */\nvoid Init_SPI(unsigned char Line_Mode, unsigned char Config, unsigned long SPEED, bool EnIrq)\n{\n    SPISCR = SPI_FREC / SPEED - 1;\n    PHSEL &= ~0x40;\n\n    SPIIE = EnIrq;\n    SPICFG = Config;\n    SPICTL = Line_Mode + 1;\n\n    NssCtl_SPI(false);\n}\n\n/**\n * SPI单字节收发\n *\n * @Writer  Any\n * @Version V1.0\n * @Date    2016-11-03\n *\n * @param   SendDat    发送的数据\n * @return             接收的数据\n */\nunsigned char SendReceive_Byte_SPI(unsigned char SendDat)\n{\n    unsigned char tmp;\n\n    NssCtl_SPI(true);\n\n    SPIDAT = SendDat;\n    while (Busy_SPI());\n    tmp = SPIDAT;\n\n    NssCtl_SPI(false);\n\n    return tmp;\n}\n\n/**\n * 检查SPI是否繁忙\n *\n * @Writer  Any\n * @Version V1.0\n * @Date    2016-11-03\n *\n * @return        1     SPI忙\n * @return        0     SPI正常\n */\nchar Busy_SPI(void)\n{\n    return ((SPICFG & 0x80) == 0x80);\n}\n\n/**\n * 收发一串SPI数据\n *\n * @Writer  Any\n * @Version V1.0\n * @Date    2016-11-03\n *\n * @param   SendDat    发送数据流\n * @param   ReceiveDat 接收数据流\n * @param   len        数据流长度\n */\nstatic idata unsigned char* Send_p;\nstatic idata unsigned char* Receive_p;\nstatic unsigned char length;\n\nvoid SendReceive_Bytes_SPI(unsigned char* SendDat, unsigned char* ReceiveDat, unsigned char len)\n{\n    bool TxFirst = true;\n\n    Send_p = SendDat;\n    Receive_p = ReceiveDat;\n    length = len;\n    \n    NssCtl_SPI(true);\n\n    while (len--)\n    {\n        SPIDAT = *SendDat;\n        SendDat++;\n        while (!(SPICTL & 0x02) == 0x02);\n\n        if (TxFirst)\n        {\n            TxFirst = false;\n        }\n        else\n        {\n            *ReceiveDat = SPIDAT;\n            ReceiveDat++;\n        }\n    }\n    \n    NssCtl_SPI(false);\n}\n\nvoid Irq_SPI(void) interrupt 14\n{\n    \n}",
+			"file": "Lib/Outside/FU68xx_SPI.c",
+			"file_size": 3444,
+			"file_write_time": 131266163974524533,
+			"settings":
+			{
+				"buffer_size": 3223,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Lib/Outside/FU68xx_SPI.H",
+			"settings":
+			{
+				"buffer_size": 707,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Lib/Outside/FU68xx_UART.h",
+			"settings":
+			{
+				"buffer_size": 546,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "Lib/Other/FU68xx_Config.h",
+			"settings":
+			{
+				"buffer_size": 190,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"last_filter": "Package Control: i",
+		"selected_items":
+		[
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"sum",
+				"Sublimall: Upload"
+			],
+			[
+				"Package Control: r",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: ",
+				"Snippet: #include <…>"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 528.0
+	},
+	"console":
+	{
+		"height": 270.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Any/FU68xxLib",
+		"/D/Any/FU68xxLib/Lib",
+		"/D/Any/FU68xxLib/Lib/Other",
+		"/D/Any/FU68xxLib/Lib/Outside"
+	],
+	"file_history":
+	[
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_Timer1.h",
+		"/D/Any/FU68xxLib/Lib/Other/FU68xx_MCU.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_I2C.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_I2C.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_ADC.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_ADC.H",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_GPIO.h",
+		"/C/Users/Any/Desktop/Untitled.fis",
+		"/D/Any/FU68xxLib/FU68xx_LIB.md",
+		"/D/Any/项目/云台/FU68XX_CeilingFan -线性hall - 20161103 - Any/FU68XX_CeilingFan -线性hall - 20161103 - Any/FU68XX_CeilingFan -线性hall - 20161102 - Any/Library/FU68xx_Hardware_Driver/Include/FU68xx_FOC.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_Flash.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_CTimer.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_Flash.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_SPI.H",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_SPI.c",
+		"/D/Any/FU68xxLib/Lib/Other/FU68xx_Config.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_UART.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/TestDmp.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/SoftWare_I2C.h",
+		"/D/Any/repository/Driver/DMP.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/SoftWare_I2C.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/DMP1.h",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/DMP1.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/TestDmp - 副本 - 副本.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/TestDmp - 副本.c",
+		"/D/Any/repository/Driver/DMP.h",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/main.c",
+		"/D/Any/项目/云台/M4-云台/User/MPU6050_DMP.c",
+		"/D/Any/项目/云台/M4-云台/User/6050DMP/inv_mpu_dmp_motion_driver.c",
+		"/D/Any/项目/云台/M4-云台/User/6050DMP/inv_mpu.c",
+		"/D/Any/repository/Driver/MPU6050_DMP.c",
+		"/D/Any/项目/云台/M4-云台/User/6050DMP/dmpmap.h",
+		"/D/Any/项目/云台/M4-云台/User/6050DMP/dmpKey.h",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/6050DMP/inv_mpu_dmp_motion_driver.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/6050DMP/inv_mpu.c",
+		"/D/Any/项目/云台/FU68xx_SPI+MPU6500/TestDmp.ino",
+		"/D/Program Files/Temp/Rar$DIa0.273/inv_mpu.c",
+		"/D/Program Files/Temp/Rar$DIa0.571/inv_mpu_dmp_motion_driver.c",
+		"/D/Program Files/Temp/Rar$DIa0.375/inv_mpu_dmp_motion_driver.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_Timer0.h",
+		"/D/Any/FU68xxLib/Lib/Other/Type.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_GPIO.c",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_UART.h",
+		"/D/Any/FU68xxLib/Lib/Outside/FU68xx_CTimer.h",
+		"/D/Any/FU68xxLib/Lib/Other/XREG.h",
+		"/D/Any/FU68xxLib/FU68xx_UART.c",
+		"/D/Any/FU68xxLib/FU68xx_UART.h",
+		"/D/Any/FU68xxLib/FU68xx_CTimer.c",
+		"/D/Any/FU68xxLib/FU68xx_CTimer.h",
+		"/D/Any/repository/API/DataExchang.h",
+		"/D/Any/repository/Driver/UICore.c",
+		"/D/Any/repository/API/DataExchang.c",
+		"/D/Any/repository/README.md",
+		"/D/Any/repository/GitHub.sublime-workspace",
+		"/D/Program Files/Temp/Rar$DIa0.994/各款软件使用方法说明.txt",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Outside/FU68xx_UART.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/API/DataExchang.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/API/DataExchang.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Test/Interrupt.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Test/test.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UICore.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/FU68xx_MCU.h",
+		"/C/Users/acer/Documents/Tencent Files/791944065/FileRecv/UARTInit.c",
+		"/D/Program Files/Temp/Rar$DIa0.937/Status Report.Txt",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/单通道固定时间失败报警/Test/test.c",
+		"/D/Any/项目/云台/68xx串口接收/Test/UARTfor6050.c",
+		"/C/Users/acer/Documents/Tencent Files/791944065/FileRecv/UARTScan.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Test/Interrupt.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/User/UIRun.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/User/UIRun.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UICore.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Type.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/User/UIRun.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/单通道固定时间失败报警V1.0-BRUCE-20160913/Lib/Driver/UICore.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/单通道固定时间失败报警V1.0-BRUCE-20160913/Lib/Driver/UICore.h",
+		"/C/Users/acer/AppData/Roaming/Sublime Text 3/Packages/User/Base File.sublime-settings",
+		"/C/Users/acer/AppData/Roaming/Sublime Text 3/Packages/DocBlockr/Base File.sublime-settings",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/单通道固定时间失败报警/Lib/Driver/UICore.c",
+		"/C/Users/acer/AppData/Roaming/Sublime Text 3/Packages/User/Sublimall.sublime-settings",
+		"/C/Users/acer/AppData/Roaming/Sublime Text 3/Packages/Sublimall/Sublimall.sublime-settings",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Outside/FU68xx_CTimer.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Outside/FU68xx_GPIO.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Outside/FU68xx_CTimer.c",
+		"/C/Windows/TEMP/Rar$DRa0.015/SecureCRT+FX+keygen_x86+x64_v8.0/SecureFX v8.x 注册机使用说明.txt",
+		"/D/Any/资料/FT8201/ft6801_i2c_master20160901-finalversion/ft6801_i2c_master20160830v1-heisenanqidong/Library/FT68xx_Hardware_Driver/Include/Customer.h",
+		"/D/Any/程序/Test/test.c",
+		"/D/Any/程序/Lib/Outside/FU68xx_Timer1.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UIExchange.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UIReceive.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UIExchange.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UIExpress.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UIReceive.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UIExpress.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UIExcahnge.h",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UIExcahnge.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/API/Queue.h",
+		"/C/Users/acer/Documents/Tencent Files/791944065/FileRecv/AirobotController可飞/AirobotController/AttitudeEstimate/AttitudeEstimate.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/API/Queue.c",
+		"/C/Users/acer/AppData/Local/Temp/Rar$DIa0.898/main.c",
+		"/D/Any/项目/FU6811_OnOff_4CH_V2.0/程序/Lib/Driver/UICore.c.dump",
+		"/C/Users/acer/AppData/Roaming/Sublime Text 3/Packages/ApplySyntax/ApplySyntax.sublime-settings"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+			"<open folders>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"####",
+			"ADCDR0",
+			"Up",
+			"Fall",
+			"define",
+			"return Get_ACK_SI2C();",
+			"if(ack) return 0;",
+			"i2creads(",
+			"readBit",
+			"readBits(",
+			"writeBits(",
+			"writeBit(",
+			"i2cread(",
+			"i2cwrite(",
+			"SlaveAddress",
+			"i2_fs",
+			"i2_tz",
+			"i2_qs",
+			"Start_SI2C",
+			"SendByte",
+			"readBits(",
+			"readBit(",
+			"writeBits(",
+			"readBits(",
+			"readBit(",
+			"i2cread(",
+			"i2cwrite(",
+			"writeBit(",
+			"0x38",
+			"0x1c",
+			"0x1b",
+			"0x6B",
+			"0x68",
+			"U16",
+			"U8",
+			"U16",
+			"U8",
+			"tab",
+			"Queue",
+			"UIReceiveStatu_Complete",
+			"UIReceiveStatu_Receive",
+			"U8",
+			"WOUTMAX",
+			"OMELPF",
+			"EKLPFMIN",
+			"OBS_K1T",
+			"------------------------------------------------------------------*/",
+			"OBS_K1T",
+			"OBS_K1TINPUT"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"if (Get_ACK_SI2C()) return 0;",
+			"return Get_ACK_SI2C();",
+			"Read_Str_SI2C(Addr, ",
+			"Read_Bit_SI2C(Addr, ",
+			"Read_Bits_SI2C(Addr, ",
+			"Write_Bits_SI2C(Addr, ",
+			"Write_Bit_SI2C(Addr, ",
+			"Read_Byte_SI2C(Addr, ",
+			"Write_Byte_SI2C(Addr, ",
+			"Addr",
+			"Send_SI2C",
+			"Stop_SI2C",
+			"Start_SI2C",
+			"i2_qs",
+			"Read_Bits_I2C(Addr, ",
+			"Read_Bit_I2C(Addr, ",
+			"Write_Bits_I2C(Addr, ",
+			"Read_Bits_I2C(Addr, ",
+			"Read_Bit_I2C(Addr, ",
+			"Read_Byte_I2C(Addr, ",
+			"Write_Byte_I2C(Addr, ",
+			"Write_Bit_I2C(Addr, ",
+			"INT_CFG",
+			"ACC_CFG",
+			"GYRO_CFG",
+			"PWR1",
+			"unsigned short",
+			"unsigned char",
+			"unsigned short",
+			"unsigned char",
+			"FL_UIReceive_Complete",
+			"FL_UIReceive_Receive",
+			"unsigned char"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Lib/Outside/FU68xx_UART.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2019,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1279,
+								1279
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"is_init_dirty_state": false,
+							"origin_encoding": "GB2312",
+							"revert_to_scratch": true,
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "Lib/Outside/FU68xx_CTimer.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3619,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								735,
+								735
+							]
+						],
+						"settings":
+						{
+							"in_converting": true,
+							"is_init_dirty_state": false,
+							"origin_encoding": "GB2312",
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Lib/Outside/FU68xx_SPI.c",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3223,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3214,
+								3214
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "UTF-8",
+							"syntax": "Packages/C++/C.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2091.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Lib/Outside/FU68xx_SPI.H",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 707,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								397
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "Lib/Outside/FU68xx_UART.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								296,
+								296
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "Lib/Other/FU68xx_Config.h",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 190,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								190,
+								190
+							]
+						],
+						"settings":
+						{
+							"is_init_dirty_state": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/C++/C.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.astyle_error_message":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 110.0
+	},
+	"pinned_build_system": "",
+	"project": "FU68xxLib.sublime-project",
+	"replace":
+	{
+		"height": 72.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 193.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
