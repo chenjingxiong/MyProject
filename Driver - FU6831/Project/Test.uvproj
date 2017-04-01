@@ -146,7 +146,7 @@
             <RestoreSysVw>1</RestoreSysVw>
           </Target>
           <RunDebugAfterBuild>0</RunDebugAfterBuild>
-          <TargetSelection>10</TargetSelection>
+          <TargetSelection>11</TargetSelection>
           <SimDlls>
             <CpuDll></CpuDll>
             <CpuDllArguments></CpuDllArguments>
@@ -386,6 +386,11 @@
               <FileName>FU68xx_SPI.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\FU68xxLib\Lib\Outside\FU68xx_SPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>FU68xx_CTimer.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FU68xxLib\Lib\Outside\FU68xx_CTimer.c</FilePath>
             </File>
           </Files>
         </Group>
