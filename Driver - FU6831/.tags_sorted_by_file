@@ -1,0 +1,523 @@
+Init_Soft_SPWM	FU68xxLib\Driver\FU68xx_Soft_SPWM.c	/^void Init_Soft_SPWM(void)$/;"	f
+MaxStep	FU68xxLib\Driver\FU68xx_Soft_SPWM.c	99;"	d	file:
+NeedLimit	FU68xxLib\Driver\FU68xx_Soft_SPWM.c	100;"	d	file:
+Updata_Soft_SPWM	FU68xxLib\Driver\FU68xx_Soft_SPWM.c	/^void Updata_Soft_SPWM(float speed)$/;"	f
+q15	FU68xxLib\Driver\FU68xx_Soft_SPWM.c	13;"	d	file:
+POWER	FU68xxLib\Driver\FU68xx_Soft_SPWM.h	6;"	d
+__FU68xx_SOFT_SPWM_H__	FU68xxLib\Driver\FU68xx_Soft_SPWM.h	2;"	d
+fast_arctan2	FU68xxLib\Driver\FastMath.c	/^float fast_arctan2(short yin, short xin)$/;"	f
+fast_arctan2	FU68xxLib\Driver\FastMath.c	/^unsigned short fast_arctan2(short yin, short xin)$/;"	f
+q15	FU68xxLib\Driver\FastMath.c	15;"	d	file:
+__FASTMATH_H__	FU68xxLib\Driver\FastMath.h	2;"	d
+FREC	FU68xxLib\Lib\Other\FU68xx_Config.h	4;"	d
+FREC16	FU68xxLib\Lib\Other\FU68xx_Config.h	5;"	d
+FU6831	FU68xxLib\Lib\Other\FU68xx_Config.h	10;"	d
+PWM_FREC	FU68xxLib\Lib\Other\FU68xx_Config.h	8;"	d
+SPI_FREC	FU68xxLib\Lib\Other\FU68xx_Config.h	7;"	d
+USE_SPI	FU68xxLib\Lib\Other\FU68xx_Config.h	13;"	d
+__FU68XX_CONFIG_H__	FU68xxLib\Lib\Other\FU68xx_Config.h	2;"	d
+USE_DRV	FU68xxLib\Lib\Other\FU68xx_MCU.h	34;"	d
+USE_PI	FU68xxLib\Lib\Other\FU68xx_MCU.h	43;"	d
+__FU68XX_MCU_H__	FU68xxLib\Lib\Other\FU68xx_MCU.h	2;"	d
+AC	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sbit AC  = PSW^6;$/;"	v
+CY	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sbit CY  = PSW^7;$/;"	v
+F0	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sbit F0  = PSW^5;$/;"	v
+F1	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sbit F1  = PSW^1;$/;"	v
+OV	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sbit OV  = PSW^2;$/;"	v
+P	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sbit P   = PSW^0;$/;"	v
+PSW	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sfr PSW  = 0xd0;$/;"	v
+RS0	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sbit RS0 = PSW^3;$/;"	v
+RS1	FU68xxLib\Lib\Other\FU68xx_SFR.h	/^sbit RS1 = PSW^4;$/;"	v
+__FU68XX_SFR_H__	FU68xxLib\Lib\Other\FU68xx_SFR.h	2;"	d
+__FU68XX_TYPE_H__	FU68xxLib\Lib\Other\FU68xx_Type.h	2;"	d
+__I	FU68xxLib\Lib\Other\FU68xx_Type.h	4;"	d
+__IO	FU68xxLib\Lib\Other\FU68xx_Type.h	5;"	d
+int16_t	FU68xxLib\Lib\Other\FU68xx_Type.h	/^typedef short          int16_t;$/;"	t
+int32_t	FU68xxLib\Lib\Other\FU68xx_Type.h	/^typedef long           int32_t;$/;"	t
+int8_t	FU68xxLib\Lib\Other\FU68xx_Type.h	/^typedef char           int8_t;$/;"	t
+uint16_t	FU68xxLib\Lib\Other\FU68xx_Type.h	/^typedef unsigned short uint16_t;$/;"	t
+uint32_t	FU68xxLib\Lib\Other\FU68xx_Type.h	/^typedef unsigned long  uint32_t;$/;"	t
+uint8_t	FU68xxLib\Lib\Other\FU68xx_Type.h	/^typedef unsigned char  uint8_t;$/;"	t
+EOF	FU68xxLib\Lib\Other\STDIO.H	13;"	d
+NULL	FU68xxLib\Lib\Other\STDIO.H	17;"	d
+_SIZE_T	FU68xxLib\Lib\Other\STDIO.H	21;"	d
+__STDIO_H__	FU68xxLib\Lib\Other\STDIO.H	10;"	d
+size_t	FU68xxLib\Lib\Other\STDIO.H	/^ typedef unsigned int size_t;$/;"	t
+NULL	FU68xxLib\Lib\Other\STRING.H	18;"	d
+_SIZE_T	FU68xxLib\Lib\Other\STRING.H	13;"	d
+__STRING_H__	FU68xxLib\Lib\Other\STRING.H	10;"	d
+size_t	FU68xxLib\Lib\Other\STRING.H	/^ typedef unsigned int size_t;$/;"	t
+U16	FU68xxLib\Lib\Other\Type.h	/^typedef unsigned short U16;$/;"	t
+U32	FU68xxLib\Lib\Other\Type.h	/^typedef unsigned long  U32;$/;"	t
+U8	FU68xxLib\Lib\Other\Type.h	/^typedef unsigned char  U8;$/;"	t
+__TYPE_H__	FU68xxLib\Lib\Other\Type.h	2;"	d
+XBYTE	FU68xxLib\Lib\Other\XREG.h	6;"	d
+__XREG_H__	FU68xxLib\Lib\Other\XREG.h	2;"	d
+STDBOOL_H	FU68xxLib\Lib\Other\stdbool.h	3;"	d
+bool	FU68xxLib\Lib\Other\stdbool.h	7;"	d
+false	FU68xxLib\Lib\Other\stdbool.h	8;"	d
+true	FU68xxLib\Lib\Other\stdbool.h	9;"	d
+STDINT_H	FU68xxLib\Lib\Other\stdint.h	3;"	d
+int16_t	FU68xxLib\Lib\Other\stdint.h	/^typedef short int16_t;$/;"	t
+int32_t	FU68xxLib\Lib\Other\stdint.h	/^typedef long int32_t;$/;"	t
+int64_t	FU68xxLib\Lib\Other\stdint.h	/^typedef int32_t int64_t[2];$/;"	t
+int8_t	FU68xxLib\Lib\Other\stdint.h	/^typedef signed char int8_t;$/;"	t
+uint16_t	FU68xxLib\Lib\Other\stdint.h	/^typedef unsigned short uint16_t;$/;"	t
+uint32_t	FU68xxLib\Lib\Other\stdint.h	/^typedef unsigned long uint32_t;$/;"	t
+uint64_t	FU68xxLib\Lib\Other\stdint.h	/^typedef uint32_t uint64_t[2];$/;"	t
+uint8_t	FU68xxLib\Lib\Other\stdint.h	/^typedef unsigned char uint8_t;$/;"	t
+ADCCFG	FU68xxLib\Lib\Outside\FU68xx_ADC.H	6;"	d
+ADCDR0	FU68xxLib\Lib\Outside\FU68xx_ADC.H	10;"	d
+ADCDR1	FU68xxLib\Lib\Outside\FU68xx_ADC.H	11;"	d
+ADCDR2	FU68xxLib\Lib\Outside\FU68xx_ADC.H	12;"	d
+ADCDR3	FU68xxLib\Lib\Outside\FU68xx_ADC.H	13;"	d
+ADCDR4	FU68xxLib\Lib\Outside\FU68xx_ADC.H	14;"	d
+ADCDR5	FU68xxLib\Lib\Outside\FU68xx_ADC.H	15;"	d
+ADCDR6	FU68xxLib\Lib\Outside\FU68xx_ADC.H	16;"	d
+ADCDR7	FU68xxLib\Lib\Outside\FU68xx_ADC.H	17;"	d
+ADCMASK	FU68xxLib\Lib\Outside\FU68xx_ADC.H	7;"	d
+ADCSCY	FU68xxLib\Lib\Outside\FU68xx_ADC.H	18;"	d
+ADCSTA	FU68xxLib\Lib\Outside\FU68xx_ADC.H	8;"	d
+__FU68XX_ADC_H__	FU68xxLib\Lib\Outside\FU68xx_ADC.H	2;"	d
+Trigger_ADC	FU68xxLib\Lib\Outside\FU68xx_ADC.c	/^void Trigger_ADC(void)$/;"	f
+AMPCR	FU68xxLib\Lib\Outside\FU68xx_AMP.h	4;"	d
+__FU68XX_AMP_H__	FU68xxLib\Lib\Outside\FU68xx_AMP.h	2;"	d
+Init_CTimer	FU68xxLib\Lib\Outside\FU68xx_CTimer.c	/^void Init_CTimer(unsigned char num, unsigned char cr0, unsigned char cr1, unsigned short arr, unsigned short dr)$/;"	f
+irq_CTimer	FU68xxLib\Lib\Outside\FU68xx_CTimer.c	/^char irq_CTimer(unsigned char num)$/;"	f
+phsel	FU68xxLib\Lib\Outside\FU68xx_CTimer.c	/^unsigned char code phsel[4] = {0x04, 0x08, 0x10, 0x02};$/;"	v
+switch_CTimer	FU68xxLib\Lib\Outside\FU68xx_CTimer.c	/^void switch_CTimer(unsigned char num, bool sw)$/;"	f
+AllWayHight	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	20;"	d
+AllWayLow	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	19;"	d
+CT_DIV1	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	9;"	d
+CT_DIV128	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	16;"	d
+CT_DIV16	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	13;"	d
+CT_DIV2	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	10;"	d
+CT_DIV32	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	14;"	d
+CT_DIV4	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	11;"	d
+CT_DIV64	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	15;"	d
+CT_DIV8	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	12;"	d
+CT_OFF	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	49;"	d
+CT_ON	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	50;"	d
+Continuity	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	45;"	d
+Counter	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	30;"	d
+Falling	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	25;"	d
+Ide	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	37;"	d
+IdeIfe	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	38;"	d
+Ife	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	36;"	d
+None	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	35;"	d
+OUT	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	31;"	d
+OUT_IP	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	21;"	d
+OUT_RP	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	22;"	d
+Rising	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	26;"	d
+Single	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	46;"	d
+TIM2ADTR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM2ADTR = 0xb4;$/;"	v
+TIM2ARR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM2ARR  = 0xae;$/;"	v
+TIM2CMTR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM2CMTR = 0xb2;$/;"	v
+TIM2CNTR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM2CNTR = 0xaa;$/;"	v
+TIM2CR0	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr TIM2CR0   = 0xa1;$/;"	v
+TIM2CR1	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr TIM2CR1   = 0xa9;$/;"	v
+TIM2DR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM2DR   = 0xac;$/;"	v
+TIM3ARR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM3ARR  = 0xa6;$/;"	v
+TIM3CNTR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM3CNTR = 0xa2;$/;"	v
+TIM3CR0	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr TIM3CR0   = 0x9c;$/;"	v
+TIM3CR1	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr TIM3CR1   = 0x9d;$/;"	v
+TIM3DR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM3DR   = 0xa4;$/;"	v
+TIM4ARR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM4ARR  = 0x96;$/;"	v
+TIM4CNTR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM4CNTR = 0x92;$/;"	v
+TIM4CR0	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr TIM4CR0   = 0x9e;$/;"	v
+TIM4CR1	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr TIM4CR1   = 0x9f;$/;"	v
+TIM4DR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM4DR   = 0x94;$/;"	v
+TIM5ARR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM5ARR  = 0x8e;$/;"	v
+TIM5CNTR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM5CNTR = 0x8a;$/;"	v
+TIM5CR0	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr TIM5CR0   = 0x89;$/;"	v
+TIM5CR1	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr TIM5CR1   = 0x91;$/;"	v
+TIM5DR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	/^sfr16 TIM5DR   = 0x8c;$/;"	v
+TIMXCEN	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	57;"	d
+TIMXIF	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	56;"	d
+TIMXIP	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	55;"	d
+TIMXIR	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	54;"	d
+Timer	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	29;"	d
+Unuse	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	41;"	d
+Use	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	42;"	d
+__FU68XX_CTIMER_H__	FU68xxLib\Lib\Outside\FU68xx_CTimer.h	2;"	d
+Calibrate_FOC	FU68xxLib\Lib\Outside\FU68xx_FOC.c	/^void Calibrate_FOC(void)$/;"	f
+Init_FOC	FU68xxLib\Lib\Outside\FU68xx_FOC.c	/^void Init_FOC(void)$/;"	f
+FOCSET0	FU68xxLib\Lib\Outside\FU68xx_FOC.h	/^sfr FOCSET0 = 0xe8;$/;"	v
+FOC_ARR	FU68xxLib\Lib\Outside\FU68xx_FOC.h	35;"	d
+FOC_CHC	FU68xxLib\Lib\Outside\FU68xx_FOC.h	14;"	d
+FOC_CMR	FU68xxLib\Lib\Outside\FU68xx_FOC.h	16;"	d
+FOC_COMR	FU68xxLib\Lib\Outside\FU68xx_FOC.h	62;"	d
+FOC_CR1	FU68xxLib\Lib\Outside\FU68xx_FOC.h	9;"	d
+FOC_CR2	FU68xxLib\Lib\Outside\FU68xx_FOC.h	10;"	d
+FOC_CR3	FU68xxLib\Lib\Outside\FU68xx_FOC.h	11;"	d
+FOC_CSO	FU68xxLib\Lib\Outside\FU68xx_FOC.h	73;"	d
+FOC_DKI	FU68xxLib\Lib\Outside\FU68xx_FOC.h	24;"	d
+FOC_DKP	FU68xxLib\Lib\Outside\FU68xx_FOC.h	23;"	d
+FOC_DMAX	FU68xxLib\Lib\Outside\FU68xx_FOC.h	25;"	d
+FOC_DMIN	FU68xxLib\Lib\Outside\FU68xx_FOC.h	26;"	d
+FOC_DTR	FU68xxLib\Lib\Outside\FU68xx_FOC.h	7;"	d
+FOC_EALP	FU68xxLib\Lib\Outside\FU68xx_FOC.h	69;"	d
+FOC_EBET	FU68xxLib\Lib\Outside\FU68xx_FOC.h	70;"	d
+FOC_EBMFK	FU68xxLib\Lib\Outside\FU68xx_FOC.h	47;"	d
+FOC_EFREQACC	FU68xxLib\Lib\Outside\FU68xx_FOC.h	20;"	d
+FOC_EFREQHOLD	FU68xxLib\Lib\Outside\FU68xx_FOC.h	22;"	d
+FOC_EFREQMIN	FU68xxLib\Lib\Outside\FU68xx_FOC.h	21;"	d
+FOC_EK1	FU68xxLib\Lib\Outside\FU68xx_FOC.h	55;"	d
+FOC_EK2	FU68xxLib\Lib\Outside\FU68xx_FOC.h	56;"	d
+FOC_EK3	FU68xxLib\Lib\Outside\FU68xx_FOC.h	57;"	d
+FOC_EK4	FU68xxLib\Lib\Outside\FU68xx_FOC.h	58;"	d
+FOC_EKI	FU68xxLib\Lib\Outside\FU68xx_FOC.h	52;"	d
+FOC_EKLPFMIN	FU68xxLib\Lib\Outside\FU68xx_FOC.h	46;"	d
+FOC_EKP	FU68xxLib\Lib\Outside\FU68xx_FOC.h	51;"	d
+FOC_EOME	FU68xxLib\Lib\Outside\FU68xx_FOC.h	50;"	d
+FOC_ESQU	FU68xxLib\Lib\Outside\FU68xx_FOC.h	71;"	d
+FOC_ETHETA	FU68xxLib\Lib\Outside\FU68xx_FOC.h	44;"	d
+FOC_FBASE	FU68xxLib\Lib\Outside\FU68xx_FOC.h	49;"	d
+FOC_FDS	FU68xxLib\Lib\Outside\FU68xx_FOC.h	18;"	d
+FOC_IA	FU68xxLib\Lib\Outside\FU68xx_FOC.h	59;"	d
+FOC_IB	FU68xxLib\Lib\Outside\FU68xx_FOC.h	60;"	d
+FOC_IBET	FU68xxLib\Lib\Outside\FU68xx_FOC.h	61;"	d
+FOC_ID	FU68xxLib\Lib\Outside\FU68xx_FOC.h	63;"	d
+FOC_IDREF	FU68xxLib\Lib\Outside\FU68xx_FOC.h	33;"	d
+FOC_IER	FU68xxLib\Lib\Outside\FU68xx_FOC.h	12;"	d
+FOC_IQ	FU68xxLib\Lib\Outside\FU68xx_FOC.h	64;"	d
+FOC_IQREF	FU68xxLib\Lib\Outside\FU68xx_FOC.h	34;"	d
+FOC_KSLIDE	FU68xxLib\Lib\Outside\FU68xx_FOC.h	45;"	d
+FOC_OMEKLPF	FU68xxLib\Lib\Outside\FU68xx_FOC.h	48;"	d
+FOC_POW	FU68xxLib\Lib\Outside\FU68xx_FOC.h	54;"	d
+FOC_POWKLPF	FU68xxLib\Lib\Outside\FU68xx_FOC.h	53;"	d
+FOC_QKI	FU68xxLib\Lib\Outside\FU68xx_FOC.h	28;"	d
+FOC_QKP	FU68xxLib\Lib\Outside\FU68xx_FOC.h	27;"	d
+FOC_QMAX	FU68xxLib\Lib\Outside\FU68xx_FOC.h	29;"	d
+FOC_QMIN	FU68xxLib\Lib\Outside\FU68xx_FOC.h	30;"	d
+FOC_RTHEACC	FU68xxLib\Lib\Outside\FU68xx_FOC.h	42;"	d
+FOC_RTHECNT	FU68xxLib\Lib\Outside\FU68xx_FOC.h	17;"	d
+FOC_RTHESTEP	FU68xxLib\Lib\Outside\FU68xx_FOC.h	41;"	d
+FOC_SR	FU68xxLib\Lib\Outside\FU68xx_FOC.h	13;"	d
+FOC_SWDUTY	FU68xxLib\Lib\Outside\FU68xx_FOC.h	36;"	d
+FOC_THECOMP	FU68xxLib\Lib\Outside\FU68xx_FOC.h	40;"	d
+FOC_THECOR	FU68xxLib\Lib\Outside\FU68xx_FOC.h	43;"	d
+FOC_THETA	FU68xxLib\Lib\Outside\FU68xx_FOC.h	39;"	d
+FOC_TRGDLY	FU68xxLib\Lib\Outside\FU68xx_FOC.h	38;"	d
+FOC_TSMIN	FU68xxLib\Lib\Outside\FU68xx_FOC.h	37;"	d
+FOC_UALP	FU68xxLib\Lib\Outside\FU68xx_FOC.h	67;"	d
+FOC_UBET	FU68xxLib\Lib\Outside\FU68xx_FOC.h	68;"	d
+FOC_UD	FU68xxLib\Lib\Outside\FU68xx_FOC.h	31;"	d
+FOC_UDCFLT	FU68xxLib\Lib\Outside\FU68xx_FOC.h	72;"	d
+FOC_UQ	FU68xxLib\Lib\Outside\FU68xx_FOC.h	32;"	d
+FOC_VALP	FU68xxLib\Lib\Outside\FU68xx_FOC.h	65;"	d
+FOC_VBET	FU68xxLib\Lib\Outside\FU68xx_FOC.h	66;"	d
+PI_RAN	FU68xxLib\Lib\Outside\FU68xx_FOC.h	15;"	d
+__FU68XX_FOC_H__	FU68xxLib\Lib\Outside\FU68xx_FOC.h	2;"	d
+EA	FU68xxLib\Lib\Outside\FU68xx_Flash.c	/^sbit EA = 0xaf;$/;"	v
+Erase_Flash	FU68xxLib\Lib\Outside\FU68xx_Flash.c	/^bool Erase_Flash(U8 xdata *FlashAddress)$/;"	f
+Read_Flash	FU68xxLib\Lib\Outside\FU68xx_Flash.c	/^U8 Read_Flash(U8 code *FlashAddress)$/;"	f
+WriteByte_Flash	FU68xxLib\Lib\Outside\FU68xx_Flash.c	/^bool WriteByte_Flash(U8 xdata *FlashAddress, U8 FlashData)$/;"	f
+Write_Flash	FU68xxLib\Lib\Outside\FU68xx_Flash.c	/^void Write_Flash(U8 xdata *FlashAddress, U8* FlashData, U8 sizes)$/;"	f
+FLKEY	FU68xxLib\Lib\Outside\FU68xx_Flash.h	/^sfr FLKEY = 0x84;$/;"	v
+PSCTL	FU68xxLib\Lib\Outside\FU68xx_Flash.h	/^sfr PSCTL = 0x85;$/;"	v
+__FU68XX_FLASH_H__	FU68xxLib\Lib\Outside\FU68xx_Flash.h	8;"	d
+Init_AN_GPIO	FU68xxLib\Lib\Outside\FU68xx_GPIO.c	/^void Init_AN_GPIO(u8 port, u8 pin)$/;"	f
+Init_OD_GPIO	FU68xxLib\Lib\Outside\FU68xx_GPIO.c	/^void Init_OD_GPIO(u8 pin)$/;"	f
+Init_OU_GPIO	FU68xxLib\Lib\Outside\FU68xx_GPIO.c	/^void Init_OU_GPIO(u8 port, u8 pin)$/;"	f
+Init_PU_GPIO	FU68xxLib\Lib\Outside\FU68xx_GPIO.c	/^void Init_PU_GPIO(u8 port, u8 pin)$/;"	f
+DRVCTL	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	38;"	d
+DRVOUT	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr DRVOUT = 0xf8;$/;"	v
+P0	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr P0   = 0x80;$/;"	v
+P00	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P00 = P0^0;$/;"	v
+P01	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P01 = P0^1;$/;"	v
+P02	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P02 = P0^2;$/;"	v
+P03	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P03 = P0^3;$/;"	v
+P04	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P04 = P0^4;$/;"	v
+P05	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P05 = P0^5;$/;"	v
+P06	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P06 = P0^6;$/;"	v
+P07	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P07 = P0^7;$/;"	v
+P0OE	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr P0OE = 0xfc;			\/\/ P0���ʹ�ܼĴ���$/;"	v
+P0PU	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	31;"	d
+P1	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr P1   = 0x90;$/;"	v
+P10	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P10 = P1^0;$/;"	v
+P11	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P11 = P1^1;$/;"	v
+P12	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P12 = P1^2;$/;"	v
+P13	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P13 = P1^3;$/;"	v
+P14	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P14 = P1^4;$/;"	v
+P15	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P15 = P1^5;$/;"	v
+P16	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P16 = P1^6;$/;"	v
+P17	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P17 = P1^7;$/;"	v
+P1AN	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	27;"	d
+P1OE	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr P1OE = 0xfd;			\/\/ P1���ʹ�ܼĴ���$/;"	v
+P1PU	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	32;"	d
+P2	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr P2   = 0xA0;$/;"	v
+P20	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P20 = P2^0;$/;"	v
+P21	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P21 = P2^1;$/;"	v
+P22	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P22 = P2^2;$/;"	v
+P23	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P23 = P2^3;$/;"	v
+P24	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P24 = P2^4;$/;"	v
+P25	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P25 = P2^5;$/;"	v
+P26	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P26 = P2^6;$/;"	v
+P27	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P27 = P2^7;$/;"	v
+P2AN	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	28;"	d
+P2OE	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr P2OE = 0xfe;			\/\/ P2���ʹ�ܼĴ���$/;"	v
+P2PU	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	33;"	d
+P3	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr P3   = 0xB0;$/;"	v
+P30	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P30 = P3^0;$/;"	v
+P31	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P31 = P3^1;$/;"	v
+P32	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P32 = P3^2;$/;"	v
+P33	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P33 = P3^3;$/;"	v
+P34	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P34 = P3^4;$/;"	v
+P35	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P35 = P3^5;$/;"	v
+P36	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P36 = P3^6;$/;"	v
+P37	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sbit P37 = P3^7;$/;"	v
+P3AN	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	29;"	d
+P3OE	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	/^sfr P3OE = 0xff;			\/\/ P3���ʹ�ܼĴ���$/;"	v
+P3PU	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	34;"	d
+P4PU	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	35;"	d
+PHSEL	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	37;"	d
+__FU68XX_GPIO_H__	FU68xxLib\Lib\Outside\FU68xx_GPIO.h	10;"	d
+Addr_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^void Addr_I2C(unsigned char Addr7)$/;"	f
+Enable_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^void Enable_I2C(bool sw)$/;"	f
+Get_Ack_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^bool Get_Ack_I2C(void)$/;"	f
+Init_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^void Init_I2C(char speed)$/;"	f
+Read_Bit_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^char Read_Bit_I2C(unsigned char slave, unsigned char addr, unsigned char bitNum, unsigned char *Data)$/;"	f
+Read_Bits_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^bool Read_Bits_I2C(unsigned char addr7, unsigned char reg, unsigned char bitS, unsigned char length, unsigned char* dat)$/;"	f
+Read_Byte_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^bool Read_Byte_I2C(unsigned char addr7, unsigned char reg, unsigned char* dat)$/;"	f
+Read_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^bool Read_I2C(unsigned char addr7, unsigned char reg, unsigned char length, unsigned char* dat)$/;"	f
+Receive_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^static unsigned char Receive_I2C(void)$/;"	f	file:
+Send_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^void Send_I2C(unsigned char Dat)$/;"	f
+Set_Ack_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^void Set_Ack_I2C(bool Ack)$/;"	f
+Start_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^void Start_I2C(bool rw)$/;"	f
+Stop_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^void Stop_I2C(void)$/;"	f
+Wait_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^static bool Wait_I2C(void)$/;"	f	file:
+Write_Bit_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^char Write_Bit_I2C(unsigned char slave, unsigned char addr, unsigned char bitNum, unsigned char Data)$/;"	f
+Write_Bits_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^bool Write_Bits_I2C(unsigned char addr7, unsigned char reg, unsigned char bitS, unsigned char length, unsigned char dat)$/;"	f
+Write_Byte_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^bool Write_Byte_I2C(unsigned char addr7, unsigned char reg, unsigned char dat)$/;"	f
+Write_I2C	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^bool Write_I2C(unsigned char addr7, unsigned char reg, unsigned char length, unsigned char* dat)$/;"	f
+config	FU68xxLib\Lib\Outside\FU68xx_I2C.c	/^static unsigned char config = 0xc0;$/;"	v	file:
+ADDR_AUTO_ADD	FU68xxLib\Lib\Outside\FU68xx_I2C.h	12;"	d
+I2CDAT	FU68xxLib\Lib\Outside\FU68xx_I2C.h	9;"	d
+I2CID	FU68xxLib\Lib\Outside\FU68xx_I2C.h	8;"	d
+I2CMOD	FU68xxLib\Lib\Outside\FU68xx_I2C.h	7;"	d
+I2CSTA	FU68xxLib\Lib\Outside\FU68xx_I2C.h	10;"	d
+I2C_100k	FU68xxLib\Lib\Outside\FU68xx_I2C.h	14;"	d
+I2C_1M	FU68xxLib\Lib\Outside\FU68xx_I2C.h	16;"	d
+I2C_400k	FU68xxLib\Lib\Outside\FU68xx_I2C.h	15;"	d
+__FU68XX_I2C_H__	FU68xxLib\Lib\Outside\FU68xx_I2C.h	2;"	d
+EA	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit EA = 0xaf;$/;"	v
+IP0	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sfr IP0 = 0xb8;$/;"	v
+IP1	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sfr IP1 = 0xc0;$/;"	v
+IP2	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sfr IP2 = 0xc8;$/;"	v
+IP3	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sfr IP3 = 0xd8;$/;"	v
+IRQADC_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQADC_H   = IP1^5;$/;"	v
+IRQADC_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQADC_L   = IP1^4;$/;"	v
+IRQCMP_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQCMP_H   = IP1^7;$/;"	v
+IRQCMP_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQCMP_L   = IP1^6;$/;"	v
+IRQFOC_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQFOC_H   = IP0^7;$/;"	v
+IRQFOC_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQFOC_L   = IP0^6;$/;"	v
+IRQI2C_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQI2C_H   = IP3^3;$/;"	v
+IRQI2C_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQI2C_L   = IP3^2;$/;"	v
+IRQINT0_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQINT0_H  = IP0^3;$/;"	v
+IRQINT0_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQINT0_L  = IP0^2;$/;"	v
+IRQINT1_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQINT1_H  = IP0^5;$/;"	v
+IRQINT1_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQINT1_L  = IP0^4;$/;"	v
+IRQLVW_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQLVW_H   = IP0^1;$/;"	v
+IRQLVW_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQLVW_L   = IP0^0;$/;"	v
+IRQMCD_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQMCD_H   = IP3^7;$/;"	v
+IRQMCD_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQMCD_L   = IP3^6;$/;"	v
+IRQRTC_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQRTC_H   = IP2^1;$/;"	v
+IRQRTC_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQRTC_L   = IP2^0;$/;"	v
+IRQSPI_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQSPI_H   = IP3^5;$/;"	v
+IRQSPI_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQSPI_L   = IP3^4;$/;"	v
+IRQTIM0_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTIM0_H  = IP1^1;$/;"	v
+IRQTIM0_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTIM0_L  = IP1^0;$/;"	v
+IRQTIM1_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTIM1_H  = IP1^3;$/;"	v
+IRQTIM1_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTIM1_L  = IP1^2;$/;"	v
+IRQTIM23_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTIM23_H = IP2^3;$/;"	v
+IRQTIM23_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTIM23_L = IP2^2;$/;"	v
+IRQTIM45_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTIM45_H = IP2^5;$/;"	v
+IRQTIM45_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTIM45_L = IP2^4;$/;"	v
+IRQTSD_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTSD_H   = IP2^7;$/;"	v
+IRQTSD_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQTSD_L   = IP2^6;$/;"	v
+IRQUART_H	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQUART_H  = IP3^1;$/;"	v
+IRQUART_L	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sbit IRQUART_L  = IP3^0;$/;"	v
+IRQ_ADC	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	56;"	d
+IRQ_CMP	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	55;"	d
+IRQ_FOC	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	50;"	d
+IRQ_I2C	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	67;"	d
+IRQ_INT0	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	52;"	d
+IRQ_INT1	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	51;"	d
+IRQ_LVW	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	53;"	d
+IRQ_MCD	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	65;"	d
+IRQ_RTC	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	63;"	d
+IRQ_SPI	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	66;"	d
+IRQ_TIM0	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	58;"	d
+IRQ_TIM1	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	57;"	d
+IRQ_TIM23	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	62;"	d
+IRQ_TIM45	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	61;"	d
+IRQ_TSD	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	60;"	d
+IRQ_UART	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	68;"	d
+TCON	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	/^sfr TCON = 0x88;$/;"	v
+__FU68XX_IRQCONTROL_H__	FU68xxLib\Lib\Outside\FU68xx_IRQControl.H	2;"	d
+Setting_IRQL	FU68xxLib\Lib\Outside\FU68xx_IRQControl.c	/^void Setting_IRQL(unsigned char IRQSource, unsigned char IRQPriority)$/;"	f
+Switch_IRQ	FU68xxLib\Lib\Outside\FU68xx_IRQControl.c	/^void Switch_IRQ(bool sw)$/;"	f
+MDDA0	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDDA0    = 0xc4;$/;"	v
+MDDA01	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr16 MDDA01 = 0xc4;$/;"	v
+MDDA1	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDDA1    = 0xc5;$/;"	v
+MDDA2	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDDA2    = 0xc6;$/;"	v
+MDDA23	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr16 MDDA23 = 0xc6;$/;"	v
+MDDA3	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDDA3    = 0xc7;$/;"	v
+MDDB0	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDDB0    = 0xcc;$/;"	v
+MDDB01	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr16 MDDB01 = 0xcc;$/;"	v
+MDDB1	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDDB1    = 0xcd;$/;"	v
+MDDB2	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDDB2    = 0xce;$/;"	v
+MDDB23	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr16 MDDB23 = 0xce;$/;"	v
+MDDB3	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDDB3    = 0xcf;$/;"	v
+MDMA	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr16 MDMA   = 0xc2;$/;"	v
+MDMB	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr16 MDMB   = 0xca;$/;"	v
+MDMODE	FU68xxLib\Lib\Outside\FU68xx_MDU.h	/^sfr MDMODE   = 0xc1;$/;"	v
+__FU68XX_MDU_H__	FU68xxLib\Lib\Outside\FU68xx_MDU.h	2;"	d
+CPHA	FU68xxLib\Lib\Outside\FU68xx_SPI.H	17;"	d
+CPOL	FU68xxLib\Lib\Outside\FU68xx_SPI.H	18;"	d
+FlagCheck1_SPI	FU68xxLib\Lib\Outside\FU68xx_SPI.H	44;"	d
+FlagCheck_SPI	FU68xxLib\Lib\Outside\FU68xx_SPI.H	43;"	d
+FlagClear_SPI	FU68xxLib\Lib\Outside\FU68xx_SPI.H	45;"	d
+L3	FU68xxLib\Lib\Outside\FU68xx_SPI.H	24;"	d
+L4_1	FU68xxLib\Lib\Outside\FU68xx_SPI.H	23;"	d
+L4_2	FU68xxLib\Lib\Outside\FU68xx_SPI.H	22;"	d
+L4_3	FU68xxLib\Lib\Outside\FU68xx_SPI.H	21;"	d
+MASTER	FU68xxLib\Lib\Outside\FU68xx_SPI.H	16;"	d
+NssCtlH_SPI	FU68xxLib\Lib\Outside\FU68xx_SPI.H	41;"	d
+NssCtlL_SPI	FU68xxLib\Lib\Outside\FU68xx_SPI.H	42;"	d
+SPI_CFG	FU68xxLib\Lib\Outside\FU68xx_SPI.H	9;"	d
+SPI_CTL	FU68xxLib\Lib\Outside\FU68xx_SPI.H	10;"	d
+SPI_DAT	FU68xxLib\Lib\Outside\FU68xx_SPI.H	12;"	d
+SPI_F_BSY	FU68xxLib\Lib\Outside\FU68xx_SPI.H	34;"	d
+SPI_F_IF	FU68xxLib\Lib\Outside\FU68xx_SPI.H	27;"	d
+SPI_F_MODF	FU68xxLib\Lib\Outside\FU68xx_SPI.H	29;"	d
+SPI_F_NSS	FU68xxLib\Lib\Outside\FU68xx_SPI.H	36;"	d
+SPI_F_RXBMT	FU68xxLib\Lib\Outside\FU68xx_SPI.H	38;"	d
+SPI_F_RXOVRN	FU68xxLib\Lib\Outside\FU68xx_SPI.H	30;"	d
+SPI_F_SLVSEL	FU68xxLib\Lib\Outside\FU68xx_SPI.H	35;"	d
+SPI_F_SRMT	FU68xxLib\Lib\Outside\FU68xx_SPI.H	37;"	d
+SPI_F_TXBMT	FU68xxLib\Lib\Outside\FU68xx_SPI.H	31;"	d
+SPI_F_WCOL	FU68xxLib\Lib\Outside\FU68xx_SPI.H	28;"	d
+SPI_IE	FU68xxLib\Lib\Outside\FU68xx_SPI.H	/^sbit SPI_IE = 0xab;$/;"	v
+SPI_SCR	FU68xxLib\Lib\Outside\FU68xx_SPI.H	11;"	d
+__FU68XX_SPI_H__	FU68xxLib\Lib\Outside\FU68xx_SPI.H	2;"	d
+Init_SPI	FU68xxLib\Lib\Outside\FU68xx_SPI.c	/^void Init_SPI(char Line_Mode, char Config, unsigned long SPEED, bool EnIrq)$/;"	f
+SendReceive_Byte_SPI	FU68xxLib\Lib\Outside\FU68xx_SPI.c	/^unsigned char SendReceive_Byte_SPI(unsigned char SendDat)$/;"	f
+SendReceive_Bytes_SPI	FU68xxLib\Lib\Outside\FU68xx_SPI.c	/^void SendReceive_Bytes_SPI(unsigned char* SendDat, unsigned char* ReceiveDat, unsigned char len)$/;"	f
+SVANG	FU68xxLib\Lib\Outside\FU68xx_SV.H	/^sfr16 SVANG = 0xe4;$/;"	v
+SVARR	FU68xxLib\Lib\Outside\FU68xx_SV.H	9;"	d
+SVCOS	FU68xxLib\Lib\Outside\FU68xx_SV.H	11;"	d
+SVCR	FU68xxLib\Lib\Outside\FU68xx_SV.H	/^sfr SVCR = 0xe1;$/;"	v
+SVSIN	FU68xxLib\Lib\Outside\FU68xx_SV.H	10;"	d
+SVUS	FU68xxLib\Lib\Outside\FU68xx_SV.H	/^sfr16 SVUS = 0xe2;$/;"	v
+__FU68xx_SV_H__	FU68xxLib\Lib\Outside\FU68xx_SV.H	2;"	d
+TIM0ARR	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	20;"	d
+TIM0CCER1	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	17;"	d
+TIM0CCER2	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	18;"	d
+TIM0CCMR1	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	15;"	d
+TIM0CCMR2	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	16;"	d
+TIM0CCR1	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	/^sfr16 TIM0CCR1 = 0xb6;$/;"	v
+TIM0CCR2	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	/^sfr16 TIM0CCR2 = 0xba;$/;"	v
+TIM0CCR3	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	/^sfr16 TIM0CCR3 = 0xbc;$/;"	v
+TIM0CCR4	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	/^sfr16 TIM0CCR4 = 0xbe;$/;"	v
+TIM0CNTR	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	19;"	d
+TIM0CR	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	13;"	d
+TIM0DTR	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	24;"	d
+TIM0EGR	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	14;"	d
+TIM0IER	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	/^sfr TIM0IER    = 0xb9;$/;"	v
+TIM0PSCR	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	22;"	d
+TIM0RCR	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	23;"	d
+TIM0SR	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	/^sfr TIM0SR     = 0xb1;$/;"	v
+__FU68XX_TIMER0_H__	FU68xxLib\Lib\Outside\FU68xx_Timer0.h	2;"	d
+DBR_Trigger	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	134;"	d
+Position_Once	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	140;"	d
+Position_Tri	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	136;"	d
+TF_OandP_Start	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	141;"	d
+TFandP_Start	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	137;"	d
+TForP	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	138;"	d
+TForP_Once	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	139;"	d
+TIM1BARR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	34;"	d
+TIM1BARRH	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	35;"	d
+TIM1BARRL	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	36;"	d
+TIM1BCCR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	22;"	d
+TIM1BCCRH	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	23;"	d
+TIM1BCCRL	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	24;"	d
+TIM1BCNTR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	38;"	d
+TIM1BCNTRH	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	39;"	d
+TIM1BCNTRL	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	40;"	d
+TIM1CR0	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	7;"	d
+TIM1CR1	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	8;"	d
+TIM1CR2	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	9;"	d
+TIM1CR3	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	10;"	d
+TIM1DBR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	18;"	d
+TIM1DBRH	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	19;"	d
+TIM1DBRL	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	20;"	d
+TIM1DR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	14;"	d
+TIM1DRH	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	15;"	d
+TIM1DRL	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	16;"	d
+TIM1DTR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	6;"	d
+TIM1IER	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	11;"	d
+TIM1RARR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	26;"	d
+TIM1RARRH	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	27;"	d
+TIM1RARRL	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	28;"	d
+TIM1RCNTR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	30;"	d
+TIM1RCNTRH	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	31;"	d
+TIM1RCNTRL	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	32;"	d
+TIM1SR	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	12;"	d
+T_DIV1	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	116;"	d
+T_DIV1024	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	126;"	d
+T_DIV128	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	123;"	d
+T_DIV16	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	120;"	d
+T_DIV16384	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	130;"	d
+T_DIV2	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	117;"	d
+T_DIV2048	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	127;"	d
+T_DIV256	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	124;"	d
+T_DIV32	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	121;"	d
+T_DIV32768	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	131;"	d
+T_DIV4	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	118;"	d
+T_DIV4096	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	128;"	d
+T_DIV512	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	125;"	d
+T_DIV64	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	122;"	d
+T_DIV8	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	119;"	d
+T_DIV8192	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	129;"	d
+T_OFF	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	144;"	d
+T_ON	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	145;"	d
+Timer_Falling	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	135;"	d
+__FU68XX_TIMER1_H__	FU68xxLib\Lib\Outside\FU68xx_Timer1.h	2;"	d
+Init_UART	FU68xxLib\Lib\Outside\FU68xx_UART.c	/^void Init_UART(unsigned char addr, unsigned char Config, unsigned long bund, bool irq)$/;"	f
+send_Byte_UART	FU68xxLib\Lib\Outside\FU68xx_UART.c	/^void send_Byte_UART(unsigned char dat)$/;"	f
+send_UART	FU68xxLib\Lib\Outside\FU68xx_UART.c	/^void send_UART(unsigned char* str, unsigned char Size)$/;"	f
+ES	FU68xxLib\Lib\Outside\FU68xx_UART.h	/^sbit ES = 0xac;$/;"	v
+EnMASTERS	FU68xxLib\Lib\Outside\FU68xx_UART.h	24;"	d
+EnRECEIVE	FU68xxLib\Lib\Outside\FU68xx_UART.h	23;"	d
+RI	FU68xxLib\Lib\Outside\FU68xx_UART.h	/^sbit RI   = 0x98;$/;"	v
+TI	FU68xxLib\Lib\Outside\FU68xx_UART.h	/^sbit TI   = 0x99;$/;"	v
+UARTMODE0	FU68xxLib\Lib\Outside\FU68xx_UART.h	18;"	d
+UARTMODE1	FU68xxLib\Lib\Outside\FU68xx_UART.h	19;"	d
+UARTMODE2	FU68xxLib\Lib\Outside\FU68xx_UART.h	20;"	d
+UARTMODE3	FU68xxLib\Lib\Outside\FU68xx_UART.h	21;"	d
+UTBU	FU68xxLib\Lib\Outside\FU68xx_UART.h	/^sfr16 UTBU = 0x9a;$/;"	v
+UTBUH	FU68xxLib\Lib\Outside\FU68xx_UART.h	/^sfr UTBUH = 0x9b;$/;"	v
+UTBUL	FU68xxLib\Lib\Outside\FU68xx_UART.h	/^sfr UTBUL = 0x9a;$/;"	v
+UTCR	FU68xxLib\Lib\Outside\FU68xx_UART.h	/^sfr UTCR  = 0x98;$/;"	v
+UTDR	FU68xxLib\Lib\Outside\FU68xx_UART.h	/^sfr UTDR  = 0x99;$/;"	v
+UsePRINTF	FU68xxLib\Lib\Outside\FU68xx_UART.h	25;"	d
+__FU68XX_UART_H__	FU68xxLib\Lib\Outside\FU68xx_UART.h	2;"	d
+VREFCR	FU68xxLib\Lib\Outside\FU68xx_VREF.h	4;"	d
+__FU68XX_VREF_H__	FU68xxLib\Lib\Outside\FU68xx_VREF.h	2;"	d
+__INTERRUPT_H__	Project\Interrupt.h	2;"	d
+Dat	Project\test.c	/^    uint16_t Dat;$/;"	m	union:__anon1	file:
+Dat8	Project\test.c	/^    uint8_t Dat8[2];$/;"	m	union:__anon1	file:
+Detail	Project\test.c	/^    }Detail;$/;"	m	union:__anon1	typeref:struct:__anon1::__anon2	file:
+Inf	Project\test.c	/^        uint16_t Inf:1;$/;"	m	struct:__anon1::__anon2	file:
+Package	Project\test.c	/^}Package;$/;"	v	typeref:union:__anon1
+Parity	Project\test.c	/^        uint16_t Parity:1;$/;"	m	struct:__anon1::__anon2	file:
+Value	Project\test.c	/^        uint16_t Value:14;$/;"	m	struct:__anon1::__anon2	file:
+main	Project\test.c	/^void main(void)$/;"	f
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_PROGRAM_VERSION	5.8	//
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
