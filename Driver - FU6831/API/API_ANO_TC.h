@@ -1,28 +1,22 @@
-#ifndef __API_RGB_H__
-#define __API_RGB_H__
+#ifndef __API_ANO_TC_H__
+#define __API_ANO_TC_H__
 
 /*******************************************************************************************************///Including Header Files
+#include <stdbool.h>
 #include <API_Base.h>
+#include <stdio.h>
 /*******************************************************************************************************///Define Struct/Union Type
 
 /*******************************************************************************************************///Define Macro
-#define R_OE            P3OE
-#define R_Pin           P37
-#define R_PinNum        0x80
-
-#define G_OE            P3OE
-#define G_Pin           P36
-#define G_PinNum        0x40
-
-#define B_OE            P3OE
-#define B_Pin           P37
-#define B_PinNum        0x80
+#define BUFF_LEN (5 + DAT_LEN)
+#define DAT_LEN  2
 /*******************************************************************************************************///Extern Symbols
 
 /*******************************************************************************************************///Inline Functions
-#define Write_RGB(a, b)    a = b
-#define Shine_RGB(a)       a = !a
+#define Send_ANO_BUFF(a) putchar(a)
 /*******************************************************************************************************///Extern Functions
-extern void Init_RGB(void);
+extern void Reset_ANO_Package(unsigned char Cmd, unsigned char Len);
+extern bool Load_ANO_Package(unsigned char Dat);
+extern bool Send_ANO_Package(void);
 
 #endif
