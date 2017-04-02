@@ -47,5 +47,6 @@ sbit SPI_IE = 0xab;
 extern void Init_SPI(char Line_Mode, char Config, unsigned long SPEED, bool EnIrq);
 extern unsigned char SendReceive_Byte_SPI(unsigned char SendDat);
 extern void SendReceive_Bytes_SPI(unsigned char* SendDat, unsigned char* ReceiveDat, unsigned char len);
+extern unsigned short SendReceive_DByte_SPI(unsigned short SendDat);
 
 #endif

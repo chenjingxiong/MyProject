@@ -15,12 +15,12 @@
 //2017-02-21    Any         取消收发函数的Nss控制权             V1.8//
 //2017-02-21    Any         取消SPI忙检测函数，改为宏定义       V1.9//
 //2017-02-21    Any         建立SPI所有标志位的检测和部分清除   V2.0//
+//2017-04-02    Any         增加收发16位数据的支持              V2.1//
 //////////////////////////////////////////////////////////////////////
 
 #include <FU68xx_SPI.h>
 #include <FU68xx_GPIO.h>
 #include <FU68xx_Config.h>
-
 /**
  * 初始化SPI
  *
@@ -62,6 +62,37 @@ unsigned char SendReceive_Byte_SPI(unsigned char SendDat)
     tmp     = SPI_DAT;
 
     return tmp;
+}
+
+/**
+ * SPI双字节收发
+ *
+ * @Writer  Any
+ * @Version V1.1
+ * @Date    2017-04-02
+ *
+ * @param   SendDat    发送的数据
+ * @return             接收的数据
+ */
+unsigned short SendReceive_DByte_SPI(unsigned short SendDat)
+{
+    union
+    {
+        unsigned short i;
+        unsigned char c[2];
+    }tmp;
+
+    tmp.i = SendDat;
+
+    SPI_DAT  = tmp.c[0];
+    while (FlagCheck1_SPI(SPI_F_BSY));
+    tmp.c[0] = SPI_DAT;
+
+    SPI_DAT  = tmp.c[1];
+    while (FlagCheck1_SPI(SPI_F_BSY));
+    tmp.c[1] = SPI_DAT;
+
+    return tmp.i;
 }
 
 /**
