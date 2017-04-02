@@ -5,7 +5,7 @@
 * @Date:               2017-04-01 23:07:31
 *
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-02 00:03:59
+* @Last Modified time: 2017-04-02 17:12:25
 */
 
 ///////////////////////////////////////////////////////////
@@ -23,8 +23,8 @@
 /*******************************************************************************************************///Define Macro
 
 /*******************************************************************************************************///Define Global Symbols
-bool Time500ms;
-bool Time2ms;
+bool time500ms;
+bool time2ms;
 /*******************************************************************************************************///Function Subject
 #if defined(EN_IRQ_CTIMER23)
     /**
@@ -42,13 +42,13 @@ bool Time2ms;
         if (FlagCheck_CTimer2(TIM_CR1_Flag_IF))
         {
             TimeCount++;
-            Time2ms = true;
+            time2ms = true;
 
             if (TimeCount == 250)
             {
                 Shine_RGB(G_Pin);
                 TimeCount = 0;
-                Time500ms = true;
+                time500ms = true;
             }
 
 
