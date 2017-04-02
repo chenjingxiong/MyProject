@@ -55,13 +55,10 @@ void Init_SPI(char Line_Mode, char Config, unsigned long SPEED, bool EnIrq)
  */
 unsigned char SendReceive_Byte_SPI(unsigned char SendDat)
 {
-    unsigned char tmp;
-
     SPI_DAT = SendDat;
     while (FlagCheck1_SPI(SPI_F_BSY));
-    tmp     = SPI_DAT;
 
-    return tmp;
+    return SPI_DAT;
 }
 
 /**
@@ -76,23 +73,17 @@ unsigned char SendReceive_Byte_SPI(unsigned char SendDat)
  */
 unsigned short SendReceive_DByte_SPI(unsigned short SendDat)
 {
-    union
-    {
-        unsigned short i;
-        unsigned char c[2];
-    }tmp;
+    unsigned short tmp;
 
-    tmp.i = SendDat;
-
-    SPI_DAT  = tmp.c[0];
+    SPI_DAT  = SendDat >> 8;
     while (FlagCheck1_SPI(SPI_F_BSY));
-    tmp.c[0] = SPI_DAT;
+    tmp = (unsigned short)SPI_DAT << 8;
 
-    SPI_DAT  = tmp.c[1];
+    SPI_DAT  = SendDat;
     while (FlagCheck1_SPI(SPI_F_BSY));
-    tmp.c[1] = SPI_DAT;
+    tmp |= SPI_DAT;
 
-    return tmp.i;
+    return tmp;
 }
 
 /**

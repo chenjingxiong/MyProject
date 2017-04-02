@@ -10,7 +10,6 @@
 //2016-12-14    Any         初始化无需计算寄存器值直接填波特率  V1.4//
 //2016-12-22    Any         升级串口初始化流程                  V1.5//
 //2016-12-22    Any         更新注释                            V1.6//
-//2017-04-02    Any         删除字节发送函数，由putchar支持     V。7//
 //////////////////////////////////////////////////////////////////////
 
 #include <FU68xx_UART.h>
@@ -24,7 +23,7 @@
  * @Version V1.2
  * @Date    2016-12-22
  *
- * @param   addr       串口号1: P06--Rx  P05--Tx    0: P33--Rx  P34--Tx
+ * @param   addr       串口号
  * @param   Config     串口配置
  * @param   bund       波特率
  * @param   irq        中断开关
@@ -37,7 +36,7 @@ void Init_UART(unsigned char addr, unsigned char Config, unsigned long bund, boo
 
     ES = irq;
 
-    PHSEL |= (0x20 << addr);
+    PHSEL |= (0x20 + addr * 0x20);
 }
 
 /**
@@ -62,4 +61,20 @@ void Send_UART(unsigned char* str, unsigned char Size)
         str++;
         TI = 0;
     }
+}
+
+/**
+ * 发送字符
+ *
+ * @Writer  Any
+ * @Version V1.0
+ * @Date    2016-08-01
+ *
+ * @param   dat        字符值
+ */
+void Send_Byte_UART(unsigned char dat)
+{
+    while (!TI);
+    UTDR = dat;
+    TI = 0;
 }

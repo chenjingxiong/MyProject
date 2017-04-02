@@ -183,7 +183,7 @@
         </Utilities>
         <Target51>
           <Target51Misc>
-            <MemoryModel>2</MemoryModel>
+            <MemoryModel>0</MemoryModel>
             <RTOS>0</RTOS>
             <RomSize>2</RomSize>
             <DataHold>0</DataHold>
@@ -309,7 +309,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\Project;..\..\..\repository\API;..\..\..\repository\Driver;..\FU68xxLib\Lib\Outside;..\FU68xxLib\Lib\Other</IncludePath>
+              <IncludePath>..\User;..\API;..\Driver;..\FU68xxLib\Other;..\FU68xxLib\Outside</IncludePath>
             </VariousControls>
           </C51>
           <Ax51>
@@ -362,14 +362,19 @@
           <GroupName>Main</GroupName>
           <Files>
             <File>
-              <FileName>test.c</FileName>
+              <FileName>Init.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\test.c</FilePath>
+              <FilePath>..\User\Init.c</FilePath>
             </File>
             <File>
               <FileName>Interrupt.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\Interrupt.c</FilePath>
+              <FilePath>..\User\Interrupt.c</FilePath>
+            </File>
+            <File>
+              <FileName>main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\main.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -378,24 +383,48 @@
         </Group>
         <Group>
           <GroupName>Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>AS5048.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Driver\AS5048.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>Outside</GroupName>
           <Files>
             <File>
-              <FileName>FU68xx_SPI.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\FU68xxLib\Lib\Outside\FU68xx_SPI.c</FilePath>
-            </File>
-            <File>
               <FileName>FU68xx_CTimer.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\FU68xxLib\Lib\Outside\FU68xx_CTimer.c</FilePath>
+              <FilePath>..\FU68xxLib\Outside\FU68xx_CTimer.c</FilePath>
+            </File>
+            <File>
+              <FileName>FU68xx_SPI.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FU68xxLib\Outside\FU68xx_SPI.c</FilePath>
+            </File>
+            <File>
+              <FileName>FU68xx_UART.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FU68xxLib\Outside\FU68xx_UART.c</FilePath>
             </File>
           </Files>
         </Group>
         <Group>
           <GroupName>API</GroupName>
+          <Files>
+            <File>
+              <FileName>API_RGB.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\API\API_RGB.c</FilePath>
+            </File>
+            <File>
+              <FileName>API_ANO_TC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\API\API_ANO_TC.c</FilePath>
+            </File>
+          </Files>
         </Group>
       </Groups>
     </Target>

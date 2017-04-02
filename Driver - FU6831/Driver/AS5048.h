@@ -21,7 +21,7 @@ typedef union
  #define AS5048_MAG 0x3ffe
  #define AS5048_ANG 0x3fff
 /*******************************************************************************************************///Extern Symbols
-
+ extern unsigned short Angle_AS5048;
 /*******************************************************************************************************///Inline Functions
  #define RW_AS5048(a) SendReceive_DByte_SPI(a)
  #define CS_H_AS5048  NssCtlH_SPI
@@ -29,5 +29,6 @@ typedef union
 /*******************************************************************************************************///Extern Functions
  extern void Write_AS5048(unsigned short Addr, unsigned short Dat);
  extern bool Read_AS5048(unsigned short Addr, unsigned short* Dat);
+ extern void Read_ANG_AS5048(void);
 
 #endif
