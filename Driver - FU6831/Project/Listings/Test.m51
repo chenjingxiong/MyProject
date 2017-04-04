@@ -1,4 +1,4 @@
-BL51 BANKED LINKER/LOCATER V6.22                                                        04/02/2017  22:38:22  PAGE 1
+BL51 BANKED LINKER/LOCATER V6.22                                                        04/03/2017  10:43:46  PAGE 1
 
 
 BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
@@ -59,7 +59,7 @@ LINK MAP OF MODULE:  .\Objects\Test (INIT)
                     004AH     0001H                  *** GAP ***
             CODE    004BH     0003H     ABSOLUTE     
             CODE    004EH     023AH     UNIT         ?C?LIB_CODE
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 2
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 2
 
 
             CODE    0288H     008CH     UNIT         ?PR?_READ_AS5048?AS5048
@@ -119,7 +119,7 @@ SEGMENT                                          BIT_GROUP          DATA_GROUP
 
 ?PR?_INIT_UART?FU68XX_UART                    0020H.3  0000H.1    0013H    0006H
 
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 3
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 3
 
 
 ?PR?_RESET_ANO_PACKAGE?API_ANO_TC             -----    -----      0013H    0002H
@@ -179,7 +179,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   B:0020H.1       PUBLIC        time2ms
   D:00B8H         PUBLIC        IP0
   D:00C0H         PUBLIC        IP1
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 4
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 4
 
 
   D:00C8H         PUBLIC        IP2
@@ -239,7 +239,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   C:0523H         LINE#         53
   C:0525H         LINE#         54
   C:0528H         LINE#         55
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 5
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 5
 
 
   C:052EH         LINE#         56
@@ -278,15 +278,15 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   -------         DO            
   D:0004H         SYMBOL        tmp
   -------         ENDDO         
-  C:0619H         LINE#         38
   C:0619H         LINE#         39
   C:0619H         LINE#         40
-  C:061FH         LINE#         42
-  C:0629H         LINE#         43
-  C:063AH         LINE#         44
-  C:064CH         LINE#         45
-  C:064FH         LINE#         47
-  C:0651H         LINE#         48
+  C:0619H         LINE#         41
+  C:061FH         LINE#         43
+  C:0629H         LINE#         44
+  C:063AH         LINE#         45
+  C:064CH         LINE#         46
+  C:064FH         LINE#         48
+  C:0651H         LINE#         49
   -------         ENDPROC       _PARITY16
   -------         PROC          _WRITE_AS5048
   D:0006H         SYMBOL        Addr
@@ -295,22 +295,22 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   D:001AH         SYMBOL        WriteAddr
   D:001CH         SYMBOL        WriteDat
   -------         ENDDO         
-  C:03A0H         LINE#         60
-  C:03A4H         LINE#         61
-  C:03A4H         LINE#         65
-  C:03B2H         LINE#         66
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 6
+  C:03A0H         LINE#         61
+  C:03A4H         LINE#         62
+  C:03A4H         LINE#         66
+  C:03B2H         LINE#         67
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 6
 
 
-  C:03D0H         LINE#         67
-  C:03E0H         LINE#         68
-  C:03FEH         LINE#         70
-  C:0405H         LINE#         71
-  C:040CH         LINE#         72
-  C:0413H         LINE#         73
-  C:0417H         LINE#         74
-  C:041EH         LINE#         75
-  C:0425H         LINE#         76
+  C:03D0H         LINE#         68
+  C:03E0H         LINE#         69
+  C:03FEH         LINE#         71
+  C:0405H         LINE#         72
+  C:040CH         LINE#         73
+  C:0413H         LINE#         74
+  C:0417H         LINE#         75
+  C:041EH         LINE#         76
+  C:0425H         LINE#         77
   -------         ENDPROC       _WRITE_AS5048
   -------         PROC          _READ_AS5048
   D:0006H         SYMBOL        Addr
@@ -319,38 +319,38 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   D:002DH         SYMBOL        WriteDat
   D:002FH         SYMBOL        ReadDat
   -------         ENDDO         
-  C:0288H         LINE#         89
-  C:028EH         LINE#         90
-  C:028EH         LINE#         94
-  C:029CH         LINE#         95
-  C:029FH         LINE#         96
-  C:02BDH         LINE#         98
-  C:02C4H         LINE#         99
-  C:02CBH         LINE#         100
-  C:02D2H         LINE#         101
-  C:02D6H         LINE#         102
-  C:02E0H         LINE#         103
-  C:02E7H         LINE#         105
-  C:02FFH         LINE#         106
+  C:0288H         LINE#         90
+  C:028EH         LINE#         91
+  C:028EH         LINE#         95
+  C:029CH         LINE#         96
+  C:029FH         LINE#         97
+  C:02BDH         LINE#         99
+  C:02C4H         LINE#         100
+  C:02CBH         LINE#         101
+  C:02D2H         LINE#         102
+  C:02D6H         LINE#         103
+  C:02E0H         LINE#         104
+  C:02E7H         LINE#         106
   C:02FFH         LINE#         107
-  C:0310H         LINE#         108
-  C:0312H         LINE#         109
-  C:0312H         LINE#         111
-  C:0313H         LINE#         112
+  C:02FFH         LINE#         108
+  C:0310H         LINE#         109
+  C:0312H         LINE#         110
+  C:0312H         LINE#         112
+  C:0313H         LINE#         113
   -------         ENDPROC       _READ_AS5048
   -------         PROC          READ_ANG_AS5048
   -------         DO            
   D:0013H         SYMBOL        Dat
   -------         ENDDO         
-  C:0652H         LINE#         123
   C:0652H         LINE#         124
-  C:0652H         LINE#         127
-  C:0659H         LINE#         128
-  C:0660H         LINE#         129
-  C:0667H         LINE#         130
-  C:066BH         LINE#         131
-  C:067FH         LINE#         132
-  C:0686H         LINE#         135
+  C:0652H         LINE#         125
+  C:0652H         LINE#         128
+  C:0659H         LINE#         129
+  C:0660H         LINE#         130
+  C:0667H         LINE#         131
+  C:066BH         LINE#         132
+  C:067FH         LINE#         133
+  C:0686H         LINE#         134
   -------         ENDPROC       READ_ANG_AS5048
   -------         ENDMOD        AS5048
 
@@ -359,7 +359,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   D:0080H         PUBLIC        P0
   D:0090H         PUBLIC        P1
   D:00A0H         PUBLIC        P2
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 7
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 7
 
 
   D:00B0H         PUBLIC        P3
@@ -419,7 +419,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   C:0028H         LINE#         70
   C:0028H         LINE#         71
   C:002FH         LINE#         72
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 8
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 8
 
 
   C:0032H         LINE#         73
@@ -479,7 +479,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   C:06F5H         LINE#         82
   C:06F7H         LINE#         83
   C:06FEH         LINE#         84
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 9
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 9
 
 
   C:0704H         LINE#         86
@@ -539,7 +539,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   -------         ENDDO         
   C:0726H         LINE#         52
   C:0726H         LINE#         53
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 10
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 10
 
 
   C:0726H         LINE#         54
@@ -599,7 +599,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   D:00A0H         PUBLIC        P2
   D:00B0H         PUBLIC        P3
   D:0023H         SYMBOL        AT_B
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 11
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 11
 
 
   D:00B8H         PUBLIC        IP0
@@ -659,7 +659,7 @@ SYMBOL TABLE OF MODULE:  .\Objects\Test (INIT)
   C:06B4H         LINE#         107
   C:06B5H         LINE#         108
   -------         ENDPROC       SEND_ANO_PACKAGE
-BL51 BANKED LINKER/LOCATER V6.22                                                      04/02/2017  22:38:22  PAGE 12
+BL51 BANKED LINKER/LOCATER V6.22                                                      04/03/2017  10:43:46  PAGE 12
 
 
   -------         ENDMOD        API_ANO_TC

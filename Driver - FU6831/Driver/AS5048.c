@@ -5,7 +5,7 @@
 * @Date:               2017-03-30 21:53:36
 *
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-02 23:02:23
+* @Last Modified time: 2017-04-03 00:20:07
 */
 
 ///////////////////////////////////////////////////////////
@@ -131,6 +131,4 @@ void Read_ANG_AS5048(void)
     CS_L_AS5048;
     Angle_AS5048 = RW_AS5048(0x0000) << 2;
     CS_H_AS5048;
-
-    // return Dat;
 }
