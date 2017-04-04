@@ -444,16 +444,6 @@
               <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_rcc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f10x_tim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_tim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32f10x_usart.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\stm32f10x_usart.c</FilePath>
-            </File>
-            <File>
               <FileName>misc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Libraries\STM32F10x_StdPeriph_Driver\src\misc.c</FilePath>
@@ -476,7 +466,12 @@
             <File>
               <FileName>main.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\main.c</FilePath>
+              <FilePath>..\User\main.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f10x_it.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\stm32f10x_it.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -489,19 +484,14 @@
               <FilePath>..\API\API_Conf.h</FilePath>
             </File>
             <File>
-              <FileName>PWM.c</FileName>
+              <FileName>API_RGB.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\API\PWM.c</FilePath>
+              <FilePath>..\API\API_RGB.c</FilePath>
             </File>
             <File>
-              <FileName>RGB.c</FileName>
+              <FileName>API_SYSCLK.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\API\RGB.c</FilePath>
-            </File>
-            <File>
-              <FileName>SYSCLK.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\API\SYSCLK.c</FilePath>
+              <FilePath>..\API\API_SYSCLK.c</FilePath>
             </File>
           </Files>
         </Group>

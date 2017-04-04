@@ -1,11 +1,11 @@
 /**
   ******************************************************************************
-  * @file    Project/STM32F10x_StdPeriph_Template/stm32f10x_it.c 
+  * @file    Project/STM32F10x_StdPeriph_Template/stm32f10x_it.c
   * @author  MCD Application Team
   * @version V3.5.0
   * @date    08-April-2011
   * @brief   Main Interrupt Service Routines.
-  *          This file provides template for all exceptions handler and 
+  *          This file provides template for all exceptions handler and
   *          peripherals interrupt service routine.
   ******************************************************************************
   * @attention
@@ -23,7 +23,8 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "stm32f10x_it.h"
-
+#include <stdbool.h>
+#include <API_Conf.h>
 /** @addtogroup STM32F10x_StdPeriph_Template
   * @{
   */
@@ -32,6 +33,11 @@
 /* Private define ------------------------------------------------------------*/
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
+
+// SysTick variables
+static uint8_t Timebase;
+TimeFlag TimeFlagBuff;
+
 /* Private function prototypes -----------------------------------------------*/
 /* Private functions ---------------------------------------------------------*/
 
@@ -134,6 +140,19 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
+    Timebase++;
+
+    TimeFlagBuff.Time.Flag10ms = true;
+
+    if (Timebase % 10 == 0) TimeFlagBuff.Time.Flag100ms = true;
+
+    if (Timebase == 50)
+    {
+        Shine_SYSLED();
+
+        TimeFlagBuff.Time.Flag500ms = true;
+        Timebase = 0;
+    }
 }
 
 /******************************************************************************/
@@ -154,7 +173,7 @@ void SysTick_Handler(void)
 
 /**
   * @}
-  */ 
+  */
 
 
 /******************* (C) COPYRIGHT 2011 STMicroelectronics *****END OF FILE****/

@@ -1,11 +1,11 @@
 /*
 * @Filename:           API_RGB.c
 * @Author:             Min Lin
-* @Explain:            
+* @Explain:
 * @Date:               2017-02-17 21:31:54
 *
-* @Last Modified by:   Min Lin
-* @Last Modified time: 2017-02-24 23:12:24
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-04-04 22:24:42
 */
 
 ///////////////////////////////////////////////////////////
@@ -22,24 +22,24 @@
 /*******************************************************************************************************///Define Global Symbols
 /*******************************************************************************************************///Function Subject
 /**
- * [Control_RGB description]
+ * RGB颜色控制函数
  *
  * @Writer  Any
  * @Version V1.0
  * @Date    2017-02-24
  *
- * @param   color      [description]
+ * @param   color      RGB颜色
  */
 void Control_RGB(uint16_t color)
 {
-    if (color & RED)   RGB_BASE->BSRRH = RED;
-    else               RGB_BASE->BSRRL = RED;
-    
-    if (color & BLUE)  RGB_BASE->BSRRH = BLUE;
-    else               RGB_BASE->BSRRL = BLUE;
-    
-    if (color & GREEN) RGB_BASE->BSRRH = GREEN;
-    else               RGB_BASE->BSRRL = GREEN;
+    if (color & RED)   RGB_BASE->BSRR = RED << 8;
+    else               RGB_BASE->BSRR = RED;
+
+    if (color & BLUE)  RGB_BASE->BSRR = BLUE << 8;
+    else               RGB_BASE->BSRR = BLUE;
+
+    if (color & GREEN) RGB_BASE->BSRR = GREEN << 8;
+    else               RGB_BASE->BSRR = GREEN;
 }
 
 /**
@@ -53,17 +53,15 @@ void Control_RGB(uint16_t color)
 void Init_RGB(void)
 {
 	GPIO_InitTypeDef GPIOBASE;
-        
-    RCC->AHB1ENR |= RGB_PORT_CLK;
 
-    GPIOBASE.GPIO_Mode  = GPIO_Mode_OUT;
-    GPIOBASE.GPIO_OType = GPIO_OType_PP;
-    GPIOBASE.GPIO_PuPd  = GPIO_PuPd_UP;
+    RCC->APB2ENR |= RGB_PORT_CLK;
+
+    GPIOBASE.GPIO_Mode  = GPIO_Mode_Out_PP;
     GPIOBASE.GPIO_Speed = GPIO_Speed_2MHz;
-    GPIOBASE.GPIO_Pin   = RED | BLUE | GREEN; 
-    
+    GPIOBASE.GPIO_Pin   = RED | BLUE | GREEN;
+
     GPIO_Init(RGB_BASE, &GPIOBASE);
-    
+
     Delay_SYS(1, s);//延时1s
     Shine_RGB(WHI);//关掉
 }
@@ -79,15 +77,13 @@ void Init_RGB(void)
 void Init_SYSLED(void)
 {
     GPIO_InitTypeDef GPIOBASE;
-        
-    RCC->AHB1ENR |= SYS_PORT_CLK;
 
-    GPIOBASE.GPIO_Mode  = GPIO_Mode_OUT;
-    GPIOBASE.GPIO_OType = GPIO_OType_PP;
-    GPIOBASE.GPIO_PuPd  = GPIO_PuPd_UP;
+    RCC->APB2ENR |= SYS_PORT_CLK;
+
+    GPIOBASE.GPIO_Mode  = GPIO_Mode_Out_PP;
     GPIOBASE.GPIO_Speed = GPIO_Speed_2MHz;
-    GPIOBASE.GPIO_Pin   = SYS_LED; 
-    
+    GPIOBASE.GPIO_Pin   = SYS_LED;
+
     GPIO_Init(SYS_BASE, &GPIOBASE);
-    
+
 }

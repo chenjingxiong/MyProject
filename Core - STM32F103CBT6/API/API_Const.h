@@ -1,4 +1,4 @@
-#ifndef __API_CONST_H__
+#ifndef __API_Const_H__
 #define __API_CONST_H__
 
 /*******************************************************************************************************///Including Header Files
