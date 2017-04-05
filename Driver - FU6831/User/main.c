@@ -5,7 +5,7 @@
 * @Date:               2017-04-01 23:45:04
 *
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-02 22:38:12
+* @Last Modified time: 2017-04-05 21:05:42
 */
 
 ///////////////////////////////////////////////////////////
@@ -35,13 +35,7 @@ void main(void)
     bool main2ms;
     uint16_t DatLast;
     uint16_t DatOut;
-    // uint8_t i = 0;
-
-    struct
-    {
-        uint16_t BUFF[3];
-        uint8_t  _SP;
-    }OB_Win = { 0 };
+    int16_t i = 0;
 
     Init();
 
@@ -51,19 +45,23 @@ void main(void)
         if (main2ms)
         {
             Shine_RGB(R_Pin);
-            Read_ANG_AS5048();
-            if (Angle_AS5048 != 0)
-            {
-                DatLast = Angle_AS5048;
 
-            }
+            Read_ANG_AS5048();
+            if (Angle_AS5048 != 0) DatLast = Angle_AS5048;
             DatOut = DatLast;
+
             Shine_RGB(R_Pin);
+
+            i += 16;
+            Set_Theta(i);
 
             Load_ANO_Package((uint8_t)(DatOut >> 8));
             Load_ANO_Package((uint8_t)DatOut);
+            Load_ANO_Package((int8_t)(i >> 8));
+            Load_ANO_Package((int8_t)i);
+
             while (!Send_ANO_Package());
-            Reset_ANO_Package(0xf1, 2);
+            Reset_ANO_Package(0xf1, DAT_LEN);
 
             time2ms = false;
         }

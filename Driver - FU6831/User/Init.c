@@ -5,7 +5,7 @@
 * @Date:               2017-04-01 23:25:09
 *
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-02 22:31:16
+* @Last Modified time: 2017-04-05 20:11:10
 */
 
 ///////////////////////////////////////////////////////////
@@ -38,10 +38,11 @@ void Init(void)
     Init_SPI(L4_3, MASTER, 2000000, false);
     Init_CTimer(2, TIM_CR0_DIV4 | TIM_CR0_Mode_Tick, TIM_CR1_IRQ_IFE | TIM_CR1_EN, 12000, 0);
     Init_UART(0, UARTMODE1, 115200, false);
+    Init_FOC();
 
     EA = 1;
 
-    Reset_ANO_Package(0xf1, 2);
+    Reset_ANO_Package(0xf1, DAT_LEN);
 
     CS_L_AS5048;
     RW_AS5048(AS5048_NOP);
