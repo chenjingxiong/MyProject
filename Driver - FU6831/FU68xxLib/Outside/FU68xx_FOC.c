@@ -9,10 +9,10 @@
 #include <FU68xx_GPIO.h>
 #include <FU68xx_ADC.h>
 #include <FU68xx_TIMER0.h>
-#include <FU68xx_AMP.h>
+// #include <FU68xx_AMP.h>
 #include <FU68xx_VREF.h>
 #include <FU68xx_Config.h>
-#include <Delay.h>
+#include <API_Delay.h>
 
 
 /**
@@ -38,8 +38,8 @@ void Calibrate_FOC(void)
         while (FlagCheck_ADC(ADC_IF));
         FlagClean_ADC(ADC_IF);
 
-        Buff[0] += ADCDR0;
-        Buff[1] += ADCDR1;
+        Buff[0] += ADC_DR0;
+        Buff[1] += ADC_DR1;
     }
 
     offset[0] = Buff[0] >> 4;
@@ -63,18 +63,18 @@ void Calibrate_FOC(void)
 void Init_FOC(void)
 {
     //IO->AN
-    P2AN       = 0x0f;
-    P3AN       = 0x03;
-    P1AN       = 0xc0;
+    // P2AN       = 0x0f;
+    // P3AN       = 0x03;
+    // P1AN       = 0xc0;
 
     // //ADC
-    EN_ADC;
+    // EN_ADC;
 
     // //AMP
-    AMPCR      = 0x07;
+    // AMPCR      = 0x07;
 
     // //VHALF
-    VREFCR     = 0x01;
+    // VREFCR     = 0x01;
 
     // //TIM0  Dead Time
     TIM0DTR    = 24;                                            // Deadtime = 0x18/24MHZ = 1us
@@ -87,7 +87,7 @@ void Init_FOC(void)
     FOC_CR1    = FOC_CR1_ANG_MANU |
                  FOC_CR1_FCE      |
                  FOC_CR1_PWM_FOC  |
-                 FOC_CR1_START//0x2d;
+                 FOC_CR1_START;//0x2d;
                                                                                // clear FOC_CR1
     FOC_CR2    = 0x00;//0x80;                                                                            // clear FOC_CR2
     FOC_THECOR = 0;

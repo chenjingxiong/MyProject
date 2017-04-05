@@ -9,7 +9,7 @@
 #ifndef __FU68XX_GPIO_H__
 #define __FU68XX_GPIO_H__
 
-#include <XREG.h>
+#include <FU68xx_Type.h>
 
 //GPIO
 sfr P0   = 0x80;
@@ -24,18 +24,18 @@ sfr P3OE = 0xff;			// P3输出使能寄存器
 
 sfr DRVOUT = 0xf8;
 
-#define P1AN   XBYTE[0x4050]	// P1模拟使能寄存器
-#define P2AN   XBYTE[0x4051]	// P2模拟使能寄存器
-#define P3AN   XBYTE[0x4052]	// P3模拟使能寄存器
+#define P1AN   *(__IO uint8_t  xdata *)0x4050	 // P1模拟使能寄存器
+#define P2AN   *(__IO uint8_t  xdata *)0x4051	 // P2模拟使能寄存器
+#define P3AN   *(__IO uint8_t  xdata *)0x4052	 // P3模拟使能寄存器
 
-#define P0PU   XBYTE[0x4053]    // P0上拉使能寄存器  
-#define P1PU   XBYTE[0x4054]	// P1上拉使能寄存器
-#define P2PU   XBYTE[0x4055]	// P2上拉使能寄存器
-#define P3PU   XBYTE[0x4056]	// P3上拉使能寄存器
-#define P4PU   XBYTE[0x4057]    // P4上拉使能寄存器
+#define P0PU   *(__IO uint8_t  xdata *)0x4053    // P0上拉使能寄存器
+#define P1PU   *(__IO uint8_t  xdata *)0x4054	 // P1上拉使能寄存器
+#define P2PU   *(__IO uint8_t  xdata *)0x4055	 // P2上拉使能寄存器
+#define P3PU   *(__IO uint8_t  xdata *)0x4056	 // P3上拉使能寄存器
+#define P4PU   *(__IO uint8_t  xdata *)0x4057    // P4上拉使能寄存器
 
-#define PHSEL  XBYTE[0x404c]    //端口复用
-#define DRVCTL XBYTE[0x404d]
+#define PHSEL  *(__IO uint8_t  xdata *)0x404c    //端口复用
+#define DRVCTL *(__IO uint8_t  xdata *)0x404d
 
 sbit P00 = P0^0;
 sbit P01 = P0^1;

@@ -1,43 +1,43 @@
 #ifndef __FU68XX_TIMER1_H__
 #define __FU68XX_TIMER1_H__
 
-#include <Type.h>
+#include <FU68xx_Type.h>
 
-#define TIM1DTR    XBYTE[0x4064]   
-#define TIM1CR0    XBYTE[0x4068]  
-#define TIM1CR1    XBYTE[0x4069]   
-#define TIM1CR2    XBYTE[0x406a]   
-#define TIM1CR3    XBYTE[0x406b]   
-#define TIM1IER    XBYTE[0x406c]   
-#define TIM1SR     XBYTE[0x406d]
+#define TIM1DTR                 *(__IO uint8_t  xdata *)0x4064
+#define TIM1CR0                 *(__IO uint8_t  xdata *)0x4068
+#define TIM1CR1                 *(__IO uint8_t  xdata *)0x4069
+#define TIM1CR2                 *(__IO uint8_t  xdata *)0x406a
+#define TIM1CR3                 *(__IO uint8_t  xdata *)0x406b
+#define TIM1IER                 *(__IO uint8_t  xdata *)0x406c
+#define TIM1SR                  *(__IO uint8_t  xdata *)0x406d
 
-#define TIM1DR *(volatile unsigned int xdata *)0x406e
-#define TIM1DRH    XBYTE[0x406e]   
-#define TIM1DRL    XBYTE[0x406f]
+#define TIM1DR                  *(__IO uint16_t xdata *)0x406e
+#define TIM1DRH                 *(__IO uint8_t  xdata *)0x406e
+#define TIM1DRL                 *(__IO uint8_t  xdata *)0x406f
 
-#define TIM1DBR *(volatile unsigned int xdata *)0x4070
-#define TIM1DBRH   XBYTE[0x4070]   
-#define TIM1DBRL   XBYTE[0x4071]
+#define TIM1DBR                 *(__IO uint16_t xdata *)0x4070
+#define TIM1DBRH                *(__IO uint8_t  xdata *)0x4070
+#define TIM1DBRL                *(__IO uint8_t  xdata *)0x4071
 
-#define TIM1BCCR *(volatile unsigned int xdata *)0x4072
-#define TIM1BCCRH  XBYTE[0x4072]   
-#define TIM1BCCRL  XBYTE[0x4073]
+#define TIM1BCCR                *(__IO uint16_t xdata *)0x4072
+#define TIM1BCCRH               *(__IO uint8_t  xdata *)0x4072
+#define TIM1BCCRL               *(__IO uint8_t  xdata *)0x4073
 
-#define TIM1RARR *(volatile unsigned int xdata *)0x4074
-#define TIM1RARRH  XBYTE[0x4074]   
-#define TIM1RARRL  XBYTE[0x4075]
+#define TIM1RARR                *(__IO uint16_t xdata *)0x4074
+#define TIM1RARRH               *(__IO uint8_t  xdata *)0x4074
+#define TIM1RARRL               *(__IO uint8_t  xdata *)0x4075
 
-#define TIM1RCNTR *(volatile unsigned int xdata *)0x4076
-#define TIM1RCNTRH XBYTE[0x4076]   
-#define TIM1RCNTRL XBYTE[0x4077]
+#define TIM1RCNTR               *(__IO uint16_t xdata *)0x4076
+#define TIM1RCNTRH              *(__IO uint8_t  xdata *)0x4076
+#define TIM1RCNTRL              *(__IO uint8_t  xdata *)0x4077
 
-#define TIM1BARR *(volatile unsigned int xdata *)0x4078
-#define TIM1BARRH  XBYTE[0x4078]   
-#define TIM1BARRL  XBYTE[0x4079] 
+#define TIM1BARR                *(__IO uint16_t xdata *)0x4078
+#define TIM1BARRH               *(__IO uint8_t  xdata *)0x4078
+#define TIM1BARRL               *(__IO uint8_t  xdata *)0x4079
 
-#define TIM1BCNTR *(volatile unsigned int xdata *)0x407a
-#define TIM1BCNTRH XBYTE[0x407a]   
-#define TIM1BCNTRL XBYTE[0x407b] 
+#define TIM1BCNTR               *(__IO uint16_t xdata *)0x407a
+#define TIM1BCNTRH              *(__IO uint8_t  xdata *)0x407a
+#define TIM1BCNTRL              *(__IO uint8_t  xdata *)0x407b
 
 
 
@@ -112,7 +112,7 @@
 
 
 //CR3
-//PSC						
+//PSC
 #define 	T_DIV1 			0x00
 #define 	T_DIV2 			0x10
 #define 	T_DIV4 			0x20

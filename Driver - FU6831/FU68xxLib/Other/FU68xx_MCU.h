@@ -31,7 +31,7 @@
 #endif
 
 #if defined(USE_FOC)
-#define USE_DRV
+//#define USE_DRV
 #include <FU68xx_FOC.h>
 #endif
 

@@ -4,16 +4,16 @@
 #include <stdbool.h>
 
 //UART
-sfr UTCR  = 0x98;
-sfr UTDR  = 0x99;
+sfr UTCR   = 0x98;
+sfr UTDR   = 0x99;
 sfr16 UTBU = 0x9a;
-sfr UTBUH = 0x9b;
-sfr UTBUL = 0x9a;
+sfr UTBUH  = 0x9b;
+sfr UTBUL  = 0x9a;
 
-sbit TI   = 0x99;
-sbit RI   = 0x98;
+sbit TI    = 0x99;
+sbit RI    = 0x98;
 
-sbit ES = 0xac;
+sbit ES    = 0xac;
 
 #define UARTMODE0 0x00
 #define UARTMODE1 0x40

@@ -123,8 +123,6 @@ bool Read_AS5048(unsigned short Addr, unsigned short* Dat)
  */
 void Read_ANG_AS5048(void)
 {
-    unsigned short Dat;
-
     CS_L_AS5048;
     RW_AS5048(0xffff);
     CS_H_AS5048;

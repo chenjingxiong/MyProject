@@ -111,7 +111,7 @@
  #define FOC_FLAG_FUIF          0x01
 /*************************************************************************************///External Function
 
-
-extern void Init_FOC(void);
+ #define Set_Theta(a)           FOC_THETA    = a
+ extern void Init_FOC(void);
 
 #endif

@@ -1,4 +1,4 @@
-#ifndef __FU68xx_Type_H__
+#ifndef __FU68XX_TYPE_H__
 #define __FU68XX_TYPE_H__
 
 #define __I            volatile const
