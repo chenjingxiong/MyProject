@@ -20,7 +20,7 @@
   */
 
 /* Define to prevent recursive inclusion -------------------------------------*/
-#ifndef __stm32f10x_conf_H__
+#ifndef __STM32F10X_CONF_H__
 #define __STM32F10x_CONF_H
 
 /* Includes ------------------------------------------------------------------*/
