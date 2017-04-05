@@ -5,7 +5,7 @@
 * @Date:               2017-04-01 23:45:04
 *
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-05 21:05:42
+* @Last Modified time: 2017-04-05 22:32:35
 */
 
 ///////////////////////////////////////////////////////////
@@ -52,8 +52,9 @@ void main(void)
 
             Shine_RGB(R_Pin);
 
-            i += 16;
-            Set_Theta(i);
+//            i += 256;
+            Set_Theta(0);
+
 
             Load_ANO_Package((uint8_t)(DatOut >> 8));
             Load_ANO_Package((uint8_t)DatOut);

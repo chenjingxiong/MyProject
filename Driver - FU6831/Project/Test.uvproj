@@ -409,6 +409,16 @@
               <FileType>1</FileType>
               <FilePath>..\FU68xxLib\Outside\FU68xx_UART.c</FilePath>
             </File>
+            <File>
+              <FileName>FU68xx_ADC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FU68xxLib\Outside\FU68xx_ADC.c</FilePath>
+            </File>
+            <File>
+              <FileName>FU68xx_FOC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\FU68xxLib\Outside\FU68xx_FOC.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -423,6 +433,11 @@
               <FileName>API_ANO_TC.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\API\API_ANO_TC.c</FilePath>
+            </File>
+            <File>
+              <FileName>API_Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\API\API_Delay.c</FilePath>
             </File>
           </Files>
         </Group>

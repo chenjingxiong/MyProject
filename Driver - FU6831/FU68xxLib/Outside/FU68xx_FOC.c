@@ -63,18 +63,18 @@ void Calibrate_FOC(void)
 void Init_FOC(void)
 {
     //IO->AN
-    // P2AN       = 0x0f;
-    // P3AN       = 0x03;
-    // P1AN       = 0xc0;
+    P2AN       = 0x0f;
+    P3AN       = 0x03;
+    P1AN       = 0xc0;
 
     // //ADC
-    // EN_ADC;
+    EN_ADC;
 
     // //AMP
     // AMPCR      = 0x07;
 
     // //VHALF
-    // VREFCR     = 0x01;
+    VREFCR     = 0x01;
 
     // //TIM0  Dead Time
     TIM0DTR    = 24;                                            // Deadtime = 0x18/24MHZ = 1us
@@ -102,10 +102,15 @@ void Init_FOC(void)
     FOC_DKI    = 0;
     FOC_IDREF  = 0;
 
+    // FOC_QMAX   = 16384;
+    // FOC_QMIN   = -16384;
+    // FOC_QKP    = 4096;
+    // FOC_QKI    = 40;
+    // FOC_IQREF  = 0;
     FOC_QMAX   = 16384;
-    FOC_QMIN   = -16384;
-    FOC_QKP    = 4096;
-    FOC_QKI    = 40;
+    FOC_QMIN   = 16384;
+    FOC_QKP    = 0;
+    FOC_QKI    = 0;
     FOC_IQREF  = 0;
 
     FOC_THETA  = 0;

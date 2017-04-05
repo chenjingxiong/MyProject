@@ -15,6 +15,8 @@ Send_ANO_BUFF	API\API_ANO_TC.h	15;"	d
 __API_ANO_TC_H__	API\API_ANO_TC.h	2;"	d
 __API_BASE_H__	API\API_Base.h	2;"	d
 __API_CONF_H__	API\API_Conf.h	2;"	d
+ms_Delay	API\API_Delay.c	/^void ms_Delay(unsigned short k)$/;"	f
+__API_DELAY_H__	API\API_Delay.h	2;"	d
 Init_RGB	API\API_RGB.c	/^void Init_RGB(void)$/;"	f
 B_OE	API\API_RGB.h	17;"	d
 B_Pin	API\API_RGB.h	18;"	d
@@ -60,17 +62,19 @@ __AS5048_H__	Driver\AS5048.h	2;"	d
 content	Driver\AS5048.h	/^    }content;$/;"	m	union:__anon3	typeref:struct:__anon3::__anon4
 __DRIVER_BASE_H__	Driver\Driver_Base.h	2;"	d
 __DRIVER_CONF_H__	Driver\Driver_Conf.h	2;"	d
-EN_IRQ_CTIMER23	FU68xxLib\Other\FU68xx_Config.h	26;"	d
+EN_IRQ_CTIMER23	FU68xxLib\Other\FU68xx_Config.h	25;"	d
 FREC	FU68xxLib\Other\FU68xx_Config.h	4;"	d
-FREC16	FU68xxLib\Other\FU68xx_Config.h	5;"	d
-FU6831	FU68xxLib\Other\FU68xx_Config.h	10;"	d
-PWM_FREC	FU68xxLib\Other\FU68xx_Config.h	8;"	d
-SPI_FREC	FU68xxLib\Other\FU68xx_Config.h	7;"	d
-USE_CTIMER	FU68xxLib\Other\FU68xx_Config.h	12;"	d
-USE_SPI	FU68xxLib\Other\FU68xx_Config.h	13;"	d
-USE_UART	FU68xxLib\Other\FU68xx_Config.h	14;"	d
+FREC16	FU68xxLib\Other\FU68xx_Config.h	6;"	d
+FREC2	FU68xxLib\Other\FU68xx_Config.h	5;"	d
+FU6831	FU68xxLib\Other\FU68xx_Config.h	11;"	d
+PWM_FREC	FU68xxLib\Other\FU68xx_Config.h	9;"	d
+SPI_FREC	FU68xxLib\Other\FU68xx_Config.h	8;"	d
+USE_ADC	FU68xxLib\Other\FU68xx_Config.h	22;"	d
+USE_CTIMER	FU68xxLib\Other\FU68xx_Config.h	13;"	d
+USE_FOC	FU68xxLib\Other\FU68xx_Config.h	17;"	d
+USE_SPI	FU68xxLib\Other\FU68xx_Config.h	14;"	d
+USE_UART	FU68xxLib\Other\FU68xx_Config.h	15;"	d
 __FU68XX_CONFIG_H__	FU68xxLib\Other\FU68xx_Config.h	2;"	d
-USE_DRV	FU68xxLib\Other\FU68xx_MCU.h	34;"	d
 USE_PI	FU68xxLib\Other\FU68xx_MCU.h	43;"	d
 __FU68XX_MCU_H__	FU68xxLib\Other\FU68xx_MCU.h	2;"	d
 AC	FU68xxLib\Other\FU68xx_SFR.h	/^sbit AC  = PSW^6;$/;"	v
@@ -101,10 +105,6 @@ NULL	FU68xxLib\Other\STRING.H	18;"	d
 _SIZE_T	FU68xxLib\Other\STRING.H	13;"	d
 __STRING_H__	FU68xxLib\Other\STRING.H	10;"	d
 size_t	FU68xxLib\Other\STRING.H	/^ typedef unsigned int size_t;$/;"	t
-U16	FU68xxLib\Other\Type.h	/^typedef unsigned short U16;$/;"	t
-U32	FU68xxLib\Other\Type.h	/^typedef unsigned long  U32;$/;"	t
-U8	FU68xxLib\Other\Type.h	/^typedef unsigned char  U8;$/;"	t
-__TYPE_H__	FU68xxLib\Other\Type.h	2;"	d
 XBYTE	FU68xxLib\Other\XREG.h	6;"	d
 __XREG_H__	FU68xxLib\Other\XREG.h	2;"	d
 STDBOOL_H	FU68xxLib\Other\stdbool.h	3;"	d
@@ -120,21 +120,21 @@ uint16_t	FU68xxLib\Other\stdint.h	/^typedef unsigned short uint16_t;$/;"	t
 uint32_t	FU68xxLib\Other\stdint.h	/^typedef unsigned long uint32_t;$/;"	t
 uint64_t	FU68xxLib\Other\stdint.h	/^typedef uint32_t uint64_t[2];$/;"	t
 uint8_t	FU68xxLib\Other\stdint.h	/^typedef unsigned char uint8_t;$/;"	t
-ADCCFG	FU68xxLib\Outside\FU68xx_ADC.H	7;"	d
-ADCDR0	FU68xxLib\Outside\FU68xx_ADC.H	11;"	d
-ADCDR1	FU68xxLib\Outside\FU68xx_ADC.H	12;"	d
-ADCDR2	FU68xxLib\Outside\FU68xx_ADC.H	13;"	d
-ADCDR3	FU68xxLib\Outside\FU68xx_ADC.H	14;"	d
-ADCDR4	FU68xxLib\Outside\FU68xx_ADC.H	15;"	d
-ADCDR5	FU68xxLib\Outside\FU68xx_ADC.H	16;"	d
-ADCDR6	FU68xxLib\Outside\FU68xx_ADC.H	17;"	d
-ADCDR7	FU68xxLib\Outside\FU68xx_ADC.H	18;"	d
-ADCMASK	FU68xxLib\Outside\FU68xx_ADC.H	8;"	d
-ADCSCY	FU68xxLib\Outside\FU68xx_ADC.H	19;"	d
-ADCSTA	FU68xxLib\Outside\FU68xx_ADC.H	9;"	d
 ADC_BUSY	FU68xxLib\Outside\FU68xx_ADC.H	22;"	d
+ADC_CFG	FU68xxLib\Outside\FU68xx_ADC.H	7;"	d
+ADC_DR0	FU68xxLib\Outside\FU68xx_ADC.H	11;"	d
+ADC_DR1	FU68xxLib\Outside\FU68xx_ADC.H	12;"	d
+ADC_DR2	FU68xxLib\Outside\FU68xx_ADC.H	13;"	d
+ADC_DR3	FU68xxLib\Outside\FU68xx_ADC.H	14;"	d
+ADC_DR4	FU68xxLib\Outside\FU68xx_ADC.H	15;"	d
+ADC_DR5	FU68xxLib\Outside\FU68xx_ADC.H	16;"	d
+ADC_DR6	FU68xxLib\Outside\FU68xx_ADC.H	17;"	d
+ADC_DR7	FU68xxLib\Outside\FU68xx_ADC.H	18;"	d
 ADC_EN	FU68xxLib\Outside\FU68xx_ADC.H	21;"	d
 ADC_IF	FU68xxLib\Outside\FU68xx_ADC.H	23;"	d
+ADC_MASK	FU68xxLib\Outside\FU68xx_ADC.H	8;"	d
+ADC_STA	FU68xxLib\Outside\FU68xx_ADC.H	9;"	d
+ADC_SYSC	FU68xxLib\Outside\FU68xx_ADC.H	19;"	d
 EN_ADC	FU68xxLib\Outside\FU68xx_ADC.H	25;"	d
 FlagCheck_ADC	FU68xxLib\Outside\FU68xx_ADC.H	27;"	d
 FlagClean_ADC	FU68xxLib\Outside\FU68xx_ADC.H	28;"	d
@@ -296,6 +296,7 @@ FOC_UQ	FU68xxLib\Outside\FU68xx_FOC.h	35;"	d
 FOC_VALP	FU68xxLib\Outside\FU68xx_FOC.h	68;"	d
 FOC_VBET	FU68xxLib\Outside\FU68xx_FOC.h	69;"	d
 PI_RAN	FU68xxLib\Outside\FU68xx_FOC.h	18;"	d
+Set_Theta	FU68xxLib\Outside\FU68xx_FOC.h	114;"	d
 __FU68XX_FOC_H__	FU68xxLib\Outside\FU68xx_FOC.h	2;"	d
 EA	FU68xxLib\Outside\FU68xx_Flash.c	/^sbit EA = 0xaf;$/;"	v
 Erase_Flash	FU68xxLib\Outside\FU68xx_Flash.c	/^bool Erase_Flash(U8 xdata *FlashAddress)$/;"	f
@@ -577,22 +578,22 @@ __FU68XX_TIMER1_H__	FU68xxLib\Outside\FU68xx_Timer1.h	2;"	d
 Init_UART	FU68xxLib\Outside\FU68xx_UART.c	/^void Init_UART(unsigned char addr, unsigned char Config, unsigned long bund, bool irq)$/;"	f
 Send_Byte_UART	FU68xxLib\Outside\FU68xx_UART.c	/^void Send_Byte_UART(unsigned char dat)$/;"	f
 Send_UART	FU68xxLib\Outside\FU68xx_UART.c	/^void Send_UART(unsigned char* str, unsigned char Size)$/;"	f
-ES	FU68xxLib\Outside\FU68xx_UART.h	/^sbit ES = 0xac;$/;"	v
+ES	FU68xxLib\Outside\FU68xx_UART.h	/^sbit ES    = 0xac;$/;"	v
 EnMASTERS	FU68xxLib\Outside\FU68xx_UART.h	24;"	d
 EnRECEIVE	FU68xxLib\Outside\FU68xx_UART.h	23;"	d
-RI	FU68xxLib\Outside\FU68xx_UART.h	/^sbit RI   = 0x98;$/;"	v
-TI	FU68xxLib\Outside\FU68xx_UART.h	/^sbit TI   = 0x99;$/;"	v
+RI	FU68xxLib\Outside\FU68xx_UART.h	/^sbit RI    = 0x98;$/;"	v
+TI	FU68xxLib\Outside\FU68xx_UART.h	/^sbit TI    = 0x99;$/;"	v
 UARTMODE0	FU68xxLib\Outside\FU68xx_UART.h	18;"	d
 UARTMODE1	FU68xxLib\Outside\FU68xx_UART.h	19;"	d
 UARTMODE2	FU68xxLib\Outside\FU68xx_UART.h	20;"	d
 UARTMODE3	FU68xxLib\Outside\FU68xx_UART.h	21;"	d
 UTBU	FU68xxLib\Outside\FU68xx_UART.h	/^sfr16 UTBU = 0x9a;$/;"	v
-UTBUH	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTBUH = 0x9b;$/;"	v
-UTBUL	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTBUL = 0x9a;$/;"	v
-UTCR	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTCR  = 0x98;$/;"	v
-UTDR	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTDR  = 0x99;$/;"	v
+UTBUH	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTBUH  = 0x9b;$/;"	v
+UTBUL	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTBUL  = 0x9a;$/;"	v
+UTCR	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTCR   = 0x98;$/;"	v
+UTDR	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTDR   = 0x99;$/;"	v
 __FU68XX_UART_H__	FU68xxLib\Outside\FU68xx_UART.h	2;"	d
-VREFCR	FU68xxLib\Outside\FU68xx_VREF.h	4;"	d
+VREFCR	FU68xxLib\Outside\FU68xx_VREF.h	6;"	d
 __FU68XX_VREF_H__	FU68xxLib\Outside\FU68xx_VREF.h	2;"	d
 Init	User\Init.c	/^void Init(void)$/;"	f
 __INIT_H__	User\Init.h	2;"	d
