@@ -102,11 +102,6 @@ void Init_FOC(void)
     FOC_DKI    = 0;
     FOC_IDREF  = 0;
 
-    // FOC_QMAX   = 16384;
-    // FOC_QMIN   = -16384;
-    // FOC_QKP    = 4096;
-    // FOC_QKI    = 40;
-    // FOC_IQREF  = 4096;
     FOC_QMAX   = 16384;
     FOC_QMIN   = 16384;
     FOC_QKP    = 0;

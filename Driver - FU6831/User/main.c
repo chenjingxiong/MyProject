@@ -4,8 +4,8 @@
 * @Explain:
 * @Date:               2017-04-01 23:45:04
 *
-* @Last Modified by:   Any
-* @Last Modified time: 2017-04-06 18:03:55
+* @Last Modified by:   Administrator
+* @Last Modified time: 2017-04-06 21:20:46
 */
 
 ///////////////////////////////////////////////////////////
@@ -27,9 +27,9 @@
 #include <Init.h>
 #include <Interrupt.h>
 /*******************************************************************************************************///Define Macro
- #define Pole                      11
- #define Criterion                 (uint16_t)((uint32_t)65536 / Pole)
- #define Angle_SensorToElectric(a) ((a % Criterion) * Pole)
+ #define Pole                                   11
+ #define Criterion                              (uint16_t)((uint32_t)65536 / Pole)
+ #define Angle_SensorToElectric(a)              (int16_t)((a % Criterion) * Pole)
 /*******************************************************************************************************///Define Global Symbols
 /*******************************************************************************************************///Function Subject
 void main(void)
@@ -37,7 +37,7 @@ void main(void)
     bool main2ms;
     uint16_t DatLast;
     uint16_t DatOut;
-    int16_t i = 0;
+    uint16_t i = 0;
 
     Init();
 
@@ -54,14 +54,14 @@ void main(void)
 
             Shine_RGB(R_Pin);
 
-            i = Angle_SensorToElectric(Angle_AS5048);
+            i = -Angle_SensorToElectric(DatOut);
             Set_Theta(i);
 
 
             Load_ANO_Package((uint8_t)(DatOut >> 8));
             Load_ANO_Package((uint8_t)DatOut);
-            Load_ANO_Package((int8_t)(i >> 8));
-            Load_ANO_Package((int8_t)i);
+            Load_ANO_Package((uint8_t)(i >> 8));
+            Load_ANO_Package((uint8_t)i);
 
             while (!Send_ANO_Package());
             Reset_ANO_Package(0xf1, DAT_LEN);
