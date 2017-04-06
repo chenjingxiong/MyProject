@@ -9,7 +9,7 @@
 #include <FU68xx_GPIO.h>
 #include <FU68xx_ADC.h>
 #include <FU68xx_TIMER0.h>
-// #include <FU68xx_AMP.h>
+#include <FU68xx_AMP.h>
 #include <FU68xx_VREF.h>
 #include <FU68xx_Config.h>
 #include <API_Delay.h>
@@ -71,7 +71,7 @@ void Init_FOC(void)
     EN_ADC;
 
     // //AMP
-    // AMPCR      = 0x07;
+    AMPCR      = 0x07;
 
     // //VHALF
     VREFCR     = 0x01;
@@ -106,7 +106,7 @@ void Init_FOC(void)
     // FOC_QMIN   = -16384;
     // FOC_QKP    = 4096;
     // FOC_QKI    = 40;
-    // FOC_IQREF  = 0;
+    // FOC_IQREF  = 4096;
     FOC_QMAX   = 16384;
     FOC_QMIN   = 16384;
     FOC_QKP    = 0;

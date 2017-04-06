@@ -4,8 +4,8 @@
 * @Explain:
 * @Date:               2017-04-01 23:45:04
 *
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-05 22:32:35
+* @Last Modified by:   Any
+* @Last Modified time: 2017-04-06 18:03:55
 */
 
 ///////////////////////////////////////////////////////////
@@ -27,7 +27,9 @@
 #include <Init.h>
 #include <Interrupt.h>
 /*******************************************************************************************************///Define Macro
-
+ #define Pole                      11
+ #define Criterion                 (uint16_t)((uint32_t)65536 / Pole)
+ #define Angle_SensorToElectric(a) ((a % Criterion) * Pole)
 /*******************************************************************************************************///Define Global Symbols
 /*******************************************************************************************************///Function Subject
 void main(void)
@@ -52,8 +54,8 @@ void main(void)
 
             Shine_RGB(R_Pin);
 
-//            i += 256;
-            Set_Theta(0);
+            i = Angle_SensorToElectric(Angle_AS5048);
+            Set_Theta(i);
 
 
             Load_ANO_Package((uint8_t)(DatOut >> 8));

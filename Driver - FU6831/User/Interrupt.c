@@ -4,8 +4,8 @@
 * @Explain:
 * @Date:               2017-04-01 23:07:31
 *
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-02 17:12:25
+* @Last Modified by:   Any
+* @Last Modified time: 2017-04-06 18:02:27
 */
 
 ///////////////////////////////////////////////////////////
@@ -24,6 +24,7 @@
 
 /*******************************************************************************************************///Define Global Symbols
 bool time500ms;
+bool time10ms;
 bool time2ms;
 /*******************************************************************************************************///Function Subject
 #if defined(EN_IRQ_CTIMER23)
@@ -43,6 +44,8 @@ bool time2ms;
         {
             TimeCount++;
             time2ms = true;
+
+            if (TimeCount % 5 == 0) time10ms = true;
 
             if (TimeCount == 250)
             {
