@@ -104,3 +104,5 @@ $RECYCLE.BIN/
 *.htm
 *.sct
 *.map
+
+Core - STM32F103CBT6/Project/JLinkLog\.txt
