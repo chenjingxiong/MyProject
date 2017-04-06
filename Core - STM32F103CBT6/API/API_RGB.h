@@ -10,12 +10,12 @@
 #define RGB_PORT_CLK   RCC_APB2Periph_GPIOB
 #define RGB_BASE       GPIOB
 #define RED            GPIO_Pin_12
-#define GREEN          GPIO_Pin_11
-#define BLUE           GPIO_Pin_13
+#define GREEN          GPIO_Pin_13
+#define BLUE           GPIO_Pin_14
 
 #define SYS_PORT_CLK   RCC_APB2Periph_GPIOB
 #define SYS_BASE       GPIOB
-#define SYS_LED        GREEN
+#define SYS_LED        BLUE
 
 /**********************************************///Define Software
 #define BLACK 0x00
