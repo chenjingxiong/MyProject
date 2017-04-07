@@ -105,8 +105,12 @@ $RECYCLE.BIN/
 *.sct
 *.map
 
+<<<<<<< HEAD
 Driver - FU6831/Project/Listings/Test\.m51
 
 Driver - FU6831/Project/Objects/Test
 
 Driver - FU6831/Project/Objects/Test\.bin
+=======
+Core - STM32F103CBT6/Project/JLinkLog\.txt
+>>>>>>> develop1

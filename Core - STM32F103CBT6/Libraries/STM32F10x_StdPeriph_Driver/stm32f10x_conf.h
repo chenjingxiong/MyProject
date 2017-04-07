@@ -21,7 +21,7 @@
 
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __STM32F10X_CONF_H__
-#define __STM32F10x_CONF_H
+#define __STM32F10x_CONF_H__
 
 /* Includes ------------------------------------------------------------------*/
 /* Uncomment/Comment the line below to enable/disable peripheral header file inclusion */
@@ -41,11 +41,11 @@
 //#include "stm32f10x_iwdg.h"
 //#include "stm32f10x_pwr.h"
 #include "stm32f10x_rcc.h"
-//#include "stm32f10x_rtc.h"
 //#include "stm32f10x_sdio.h"
+//#include "stm32f10x_rtc.h"
 //#include "stm32f10x_spi.h"
 // #include "stm32f10x_tim.h"
-// #include "stm32f10x_usart.h"
+#include "stm32f10x_usart.h"
 //#include "stm32f10x_wwdg.h"
 #include "misc.h"
 /* High level functions for NVIC and SysTick (add-on to CMSIS functions) */

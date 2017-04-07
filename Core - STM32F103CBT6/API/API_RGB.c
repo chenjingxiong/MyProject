@@ -5,7 +5,7 @@
 * @Date:               2017-02-17 21:31:54
 *
 * @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-04 22:24:42
+* @Last Modified time: 2017-04-06 23:26:17
 */
 
 ///////////////////////////////////////////////////////////
@@ -32,14 +32,14 @@
  */
 void Control_RGB(uint16_t color)
 {
-    if (color & RED)   RGB_BASE->BSRR = RED << 8;
-    else               RGB_BASE->BSRR = RED;
+    if (color & RED)   RGB_BASE->BSRR = (uint32_t)RED << 8;
+    else               RGB_BASE->BSRR = (uint32_t)RED;
 
-    if (color & BLUE)  RGB_BASE->BSRR = BLUE << 8;
-    else               RGB_BASE->BSRR = BLUE;
+    if (color & BLUE)  RGB_BASE->BSRR = (uint32_t)BLUE << 8;
+    else               RGB_BASE->BSRR = (uint32_t)BLUE;
 
-    if (color & GREEN) RGB_BASE->BSRR = GREEN << 8;
-    else               RGB_BASE->BSRR = GREEN;
+    if (color & GREEN) RGB_BASE->BSRR = (uint32_t)GREEN << 8;
+    else               RGB_BASE->BSRR = (uint32_t)GREEN;
 }
 
 /**
