@@ -4,8 +4,8 @@
 * @Explain:
 * @Date:               2017-04-01 23:45:04
 *
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-06 21:20:46
+* @Last Modified by:   Any
+* @Last Modified time: 2017-04-07 11:37:23
 */
 
 ///////////////////////////////////////////////////////////
@@ -26,10 +26,8 @@
 
 #include <Init.h>
 #include <Interrupt.h>
+#include <Hardware.h>
 /*******************************************************************************************************///Define Macro
- #define Pole                                   11
- #define Criterion                              (uint16_t)((uint32_t)65536 / Pole)
- #define Angle_SensorToElectric(a)              (int16_t)((a % Criterion) * Pole)
 /*******************************************************************************************************///Define Global Symbols
 /*******************************************************************************************************///Function Subject
 void main(void)

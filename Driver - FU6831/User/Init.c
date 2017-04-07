@@ -4,8 +4,8 @@
 * @Explain:
 * @Date:               2017-04-01 23:25:09
 *
-* @Last Modified by:   Administrator
-* @Last Modified time: 2017-04-05 20:11:10
+* @Last Modified by:   Any
+* @Last Modified time: 2017-04-07 11:49:39
 */
 
 ///////////////////////////////////////////////////////////
@@ -17,8 +17,11 @@
 
 /*******************************************************************************************************///Including Header Files
 #include <FU68xx_MCU.h>
+
 #include <API_Conf.h>
 #include <Driver_Conf.h>
+
+#include <Hardware.h>
 /*******************************************************************************************************///Define Macro
 
 /*******************************************************************************************************///Define Global Symbols
@@ -39,6 +42,18 @@ void Init(void)
     Init_CTimer(2, TIM_CR0_DIV4 | TIM_CR0_Mode_Tick, TIM_CR1_IRQ_IFE | TIM_CR1_EN, 12000, 0);
     Init_UART(0, UARTMODE1, 115200, false);
     Init_FOC();
+
+    Set_DMax(0);
+    Set_DMin(0);
+    Set_DKp(0);
+    Set_DKi(0);
+    Set_DRef(0);
+
+    Set_QMax(UQx);
+    Set_QMin(UQx);
+    Set_QKp(0);
+    Set_QKi(0);
+    Set_QRef(0);
 
     EA = 1;
 
