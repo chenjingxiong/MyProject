@@ -5,7 +5,8 @@
 
 /*************************************************************************************///Defined Register
  //FOC
- sfr FOCSET0 = 0xe8;
+ sfr FOC_SET0 = 0xe8;
+ sfr FOC_SET1 = 0xe9;
 
  #define FOC_DTR                 *(__IO uint8_t  xdata *)0x4064
 
@@ -25,16 +26,16 @@
  #define FOC_EFREQHOLD           *(__IO uint16_t xdata *)0x408c
  #define FOC_DKP                 *(__IO uint16_t xdata *)0x4098
  #define FOC_DKI                 *(__IO uint16_t xdata *)0x409a
- #define FOC_DMAX                *(__IO uint16_t xdata *)0x409c
- #define FOC_DMIN                *(__IO uint16_t xdata *)0x409e
+ #define FOC_DMAX                *(__IO  int16_t xdata *)0x409c
+ #define FOC_DMIN                *(__IO  int16_t xdata *)0x409e
  #define FOC_QKP                 *(__IO uint16_t xdata *)0x40a0
  #define FOC_QKI                 *(__IO uint16_t xdata *)0x40a2
- #define FOC_QMAX                *(__IO uint16_t xdata *)0x40a4
- #define FOC_QMIN                *(__IO uint16_t xdata *)0x40a6
- #define FOC_UD                  *(__IO uint16_t xdata *)0x40a8
- #define FOC_UQ                  *(__IO uint16_t xdata *)0x40aa
- #define FOC_IDREF               *(__IO uint16_t xdata *)0x40ac
- #define FOC_IQREF               *(__IO uint16_t xdata *)0x40ae
+ #define FOC_QMAX                *(__IO  int16_t xdata *)0x40a4
+ #define FOC_QMIN                *(__IO  int16_t xdata *)0x40a6
+ #define FOC_UD                  *(__IO  int16_t xdata *)0x40a8
+ #define FOC_UQ                  *(__IO  int16_t xdata *)0x40aa
+ #define FOC_IDREF               *(__IO  int16_t xdata *)0x40ac
+ #define FOC_IQREF               *(__IO  int16_t xdata *)0x40ae
  #define FOC_ARR                 *(__IO uint16_t xdata *)0x40b0
  #define FOC_SWDUTY              *(__IO uint16_t xdata *)0x40b2
  #define FOC_TSMIN               *(__IO uint16_t xdata *)0x40b4
@@ -110,19 +111,21 @@
  #define FOC_FLAG_FCIF          0x02
  #define FOC_FLAG_FUIF          0x01
 /*************************************************************************************///External Function
- #define Set_DMax(a)            FOC_DMAX  = a
- #define Set_DMin(a)            FOC_DMIN  = a
- #define Set_DKp(a)             FOC_DKP   = a
- #define Set_DKi(a)             FOC_DKI   = a
- #define Set_DRef(a)            FOC_IDREF = a
+ #define Set_FOC_DMax(a)        FOC_DMAX  = a
+ #define Set_FOC_DMin(a)        FOC_DMIN  = a
+ #define Set_FOC_DKp(a)         FOC_DKP   = a
+ #define Set_FOC_DKi(a)         FOC_DKI   = a
+ #define Set_FOC_DRef(a)        FOC_IDREF = a
+ #define Set_FOC_DOut(a)        FOC_UD    = a
 
- #define Set_QMax(a)            FOC_QMAX  = a
- #define Set_QMin(a)            FOC_QMIN  = a
- #define Set_QKp(a)             FOC_QKP   = a
- #define Set_QKi(a)             FOC_QKI   = a
- #define Set_QRef(a)            FOC_IQREF = a
+ #define Set_FOC_QMax(a)        FOC_QMAX  = a
+ #define Set_FOC_QMin(a)        FOC_QMIN  = a
+ #define Set_FOC_QKp(a)         FOC_QKP   = a
+ #define Set_FOC_QKi(a)         FOC_QKI   = a
+ #define Set_FOC_QRef(a)        FOC_IQREF = a
+ #define Set_FOC_QOut(a)        FOC_UQ    = a
 
- #define Set_Theta(a)           FOC_THETA = a
+ #define Set_FOC_Theta(a)       FOC_THETA = a
 
  extern void Init_FOC(void);
 

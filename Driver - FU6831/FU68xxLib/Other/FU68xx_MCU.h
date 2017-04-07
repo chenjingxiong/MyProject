@@ -8,56 +8,60 @@
 #include <FU68xx_IRQControl.h>
 
 #if defined(USE_UART)
-#include <FU68xx_UART.h>
+    #include <FU68xx_UART.h>
 #endif
 #if defined(USE_SPI)
-#include <FU68xx_SPI.h>
+    #include <FU68xx_SPI.h>
 #endif
 
 #if defined(USE_CTIMER)
-#include <FU68xx_CTimer.h>
+    #include <FU68xx_CTimer.h>
 #endif
 
 #if defined(USE_TIMER1)
-#include <FU68xx_Timer1.h>
+    #include <FU68xx_Timer1.h>
 #endif
 
 #if defined(USE_DMA)
-#include <FU68xx_DMA.h>
+    #include <FU68xx_DMA.h>
 #endif
 
 #if defined(USE_I2C)
-#include <FU68xx_I2C.h>
+    #include <FU68xx_I2C.h>
 #endif
 
 #if defined(USE_FOC)
 //#define USE_DRV
-#include <FU68xx_FOC.h>
+    #include <FU68xx_FOC.h>
 #endif
 
 #if defined(USE_DRV)
-#include <FU68xx_DRV.h>
+    #include <FU68xx_DRV.h>
 #endif
 
 #if defined(USE_LPF)
 #define USE_PI
-#include <FU68xx_LPF.h>
+    #include <FU68xx_LPF.h>
 #endif
 
 #if defined(USE_PI)
-#include <FU68xx_PI.h>
+    #include <FU68xx_PI.h>
 #endif
 
 #if defined(USE_MDU)
-#include <FU68xx_MDU.h>
+    #include <FU68xx_MDU.h>
 #endif
 
 #if defined(USE_ADC)
-#include <FU68xx_ADC.h>
+    #include <FU68xx_ADC.h>
 #endif
 
 #if defined(USE_CMP)
-#include <FU68xx_CMP.h>
+    #include <FU68xx_CMP.h>
+#endif
+
+#if defined(USE_SV)
+    #include <FU68xx_SV.h>
 #endif
 
 #endif

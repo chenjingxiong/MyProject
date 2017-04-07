@@ -21,6 +21,8 @@
 // #define USE_TIMER1
 #define USE_ADC
 // #define USE_CMP
+#define USE_SV
+
 
 #define EN_IRQ_CTIMER23
 // #define EN_IRQ_CTIMER45

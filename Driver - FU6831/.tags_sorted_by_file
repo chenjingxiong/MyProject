@@ -62,7 +62,7 @@ __AS5048_H__	Driver\AS5048.h	2;"	d
 content	Driver\AS5048.h	/^    }content;$/;"	m	union:__anon3	typeref:struct:__anon3::__anon4
 __DRIVER_BASE_H__	Driver\Driver_Base.h	2;"	d
 __DRIVER_CONF_H__	Driver\Driver_Conf.h	2;"	d
-EN_IRQ_CTIMER23	FU68xxLib\Other\FU68xx_Config.h	25;"	d
+EN_IRQ_CTIMER23	FU68xxLib\Other\FU68xx_Config.h	27;"	d
 FREC	FU68xxLib\Other\FU68xx_Config.h	4;"	d
 FREC16	FU68xxLib\Other\FU68xx_Config.h	6;"	d
 FREC2	FU68xxLib\Other\FU68xx_Config.h	5;"	d
@@ -73,6 +73,7 @@ USE_ADC	FU68xxLib\Other\FU68xx_Config.h	22;"	d
 USE_CTIMER	FU68xxLib\Other\FU68xx_Config.h	13;"	d
 USE_FOC	FU68xxLib\Other\FU68xx_Config.h	17;"	d
 USE_SPI	FU68xxLib\Other\FU68xx_Config.h	14;"	d
+USE_SV	FU68xxLib\Other\FU68xx_Config.h	24;"	d
 USE_UART	FU68xxLib\Other\FU68xx_Config.h	15;"	d
 __FU68XX_CONFIG_H__	FU68xxLib\Other\FU68xx_Config.h	2;"	d
 USE_PI	FU68xxLib\Other\FU68xx_MCU.h	43;"	d
@@ -141,7 +142,7 @@ FlagClean_ADC	FU68xxLib\Outside\FU68xx_ADC.H	28;"	d
 Trigger_ADC	FU68xxLib\Outside\FU68xx_ADC.H	26;"	d
 __FU68XX_ADC_H__	FU68xxLib\Outside\FU68xx_ADC.H	2;"	d
 Init_ADC	FU68xxLib\Outside\FU68xx_ADC.c	/^void Init_ADC(uint8_t Channel, uint8_t Time)$/;"	f
-AMPCR	FU68xxLib\Outside\FU68xx_AMP.h	4;"	d
+AMPCR	FU68xxLib\Outside\FU68xx_AMP.h	6;"	d
 __FU68XX_AMP_H__	FU68xxLib\Outside\FU68xx_AMP.h	2;"	d
 Init_CTimer	FU68xxLib\Outside\FU68xx_CTimer.c	/^void Init_CTimer(unsigned char num, unsigned char cr0, unsigned char cr1, unsigned short arr, unsigned short dr)$/;"	f
 phsel	FU68xxLib\Outside\FU68xx_CTimer.c	/^unsigned char code phsel[4] = {0x04, 0x08, 0x10, 0x02};$/;"	v
@@ -296,7 +297,17 @@ FOC_UQ	FU68xxLib\Outside\FU68xx_FOC.h	35;"	d
 FOC_VALP	FU68xxLib\Outside\FU68xx_FOC.h	68;"	d
 FOC_VBET	FU68xxLib\Outside\FU68xx_FOC.h	69;"	d
 PI_RAN	FU68xxLib\Outside\FU68xx_FOC.h	18;"	d
-Set_Theta	FU68xxLib\Outside\FU68xx_FOC.h	114;"	d
+Set_FOC_DKi	FU68xxLib\Outside\FU68xx_FOC.h	116;"	d
+Set_FOC_DKp	FU68xxLib\Outside\FU68xx_FOC.h	115;"	d
+Set_FOC_DMax	FU68xxLib\Outside\FU68xx_FOC.h	113;"	d
+Set_FOC_DMin	FU68xxLib\Outside\FU68xx_FOC.h	114;"	d
+Set_FOC_DRef	FU68xxLib\Outside\FU68xx_FOC.h	117;"	d
+Set_FOC_QKi	FU68xxLib\Outside\FU68xx_FOC.h	122;"	d
+Set_FOC_QKp	FU68xxLib\Outside\FU68xx_FOC.h	121;"	d
+Set_FOC_QMax	FU68xxLib\Outside\FU68xx_FOC.h	119;"	d
+Set_FOC_QMin	FU68xxLib\Outside\FU68xx_FOC.h	120;"	d
+Set_FOC_QRef	FU68xxLib\Outside\FU68xx_FOC.h	123;"	d
+Set_FOC_Theta	FU68xxLib\Outside\FU68xx_FOC.h	125;"	d
 __FU68XX_FOC_H__	FU68xxLib\Outside\FU68xx_FOC.h	2;"	d
 EA	FU68xxLib\Outside\FU68xx_Flash.c	/^sbit EA = 0xaf;$/;"	v
 Erase_Flash	FU68xxLib\Outside\FU68xx_Flash.c	/^bool Erase_Flash(U8 xdata *FlashAddress)$/;"	f
@@ -495,12 +506,27 @@ Init_SPI	FU68xxLib\Outside\FU68xx_SPI.c	/^void Init_SPI(char Line_Mode, char Con
 SendReceive_Byte_SPI	FU68xxLib\Outside\FU68xx_SPI.c	/^unsigned char SendReceive_Byte_SPI(unsigned char SendDat)$/;"	f
 SendReceive_Bytes_SPI	FU68xxLib\Outside\FU68xx_SPI.c	/^void SendReceive_Bytes_SPI(unsigned char* SendDat, unsigned char* ReceiveDat, unsigned char len)$/;"	f
 SendReceive_DByte_SPI	FU68xxLib\Outside\FU68xx_SPI.c	/^unsigned short SendReceive_DByte_SPI(unsigned short SendDat)$/;"	f
-SVANG	FU68xxLib\Outside\FU68xx_SV.H	/^sfr16 SVANG = 0xe4;$/;"	v
-SVARR	FU68xxLib\Outside\FU68xx_SV.H	9;"	d
-SVCOS	FU68xxLib\Outside\FU68xx_SV.H	11;"	d
-SVCR	FU68xxLib\Outside\FU68xx_SV.H	/^sfr SVCR = 0xe1;$/;"	v
-SVSIN	FU68xxLib\Outside\FU68xx_SV.H	10;"	d
-SVUS	FU68xxLib\Outside\FU68xx_SV.H	/^sfr16 SVUS = 0xe2;$/;"	v
+BusyCheck_SV	FU68xxLib\Outside\FU68xx_SV.H	33;"	d
+Enable_SV	FU68xxLib\Outside\FU68xx_SV.H	32;"	d
+Init_SV	FU68xxLib\Outside\FU68xx_SV.H	28;"	d
+SV_ANG	FU68xxLib\Outside\FU68xx_SV.H	/^ sfr16 SV_ANG =                          0xe4;$/;"	v
+SV_ARR	FU68xxLib\Outside\FU68xx_SV.H	11;"	d
+SV_COS	FU68xxLib\Outside\FU68xx_SV.H	13;"	d
+SV_CR	FU68xxLib\Outside\FU68xx_SV.H	/^ sfr   SV_CR  =                          0xe1;$/;"	v
+SV_CR_Mode_SPWM	FU68xxLib\Outside\FU68xx_SV.H	15;"	d
+SV_CR_Mode_SVPWM	FU68xxLib\Outside\FU68xx_SV.H	16;"	d
+SV_CR_Mode_SinCos	FU68xxLib\Outside\FU68xx_SV.H	17;"	d
+SV_CR_Polar_1	FU68xxLib\Outside\FU68xx_SV.H	22;"	d
+SV_CR_Polar_2	FU68xxLib\Outside\FU68xx_SV.H	23;"	d
+SV_CR_SEG_5	FU68xxLib\Outside\FU68xx_SV.H	19;"	d
+SV_CR_SEG_7	FU68xxLib\Outside\FU68xx_SV.H	20;"	d
+SV_EN	FU68xxLib\Outside\FU68xx_SV.H	25;"	d
+SV_Flag_Busy	FU68xxLib\Outside\FU68xx_SV.H	26;"	d
+SV_SIN	FU68xxLib\Outside\FU68xx_SV.H	12;"	d
+SV_US	FU68xxLib\Outside\FU68xx_SV.H	/^ sfr16 SV_US  =                          0xe2;$/;"	v
+Set_SV_ARR	FU68xxLib\Outside\FU68xx_SV.H	31;"	d
+Set_SV_Theta	FU68xxLib\Outside\FU68xx_SV.H	30;"	d
+Set_SV_US	FU68xxLib\Outside\FU68xx_SV.H	29;"	d
 __FU68xx_SV_H__	FU68xxLib\Outside\FU68xx_SV.H	2;"	d
 TIM0ARR	FU68xxLib\Outside\FU68xx_Timer0.h	20;"	d
 TIM0CCER1	FU68xxLib\Outside\FU68xx_Timer0.h	17;"	d
@@ -595,8 +621,24 @@ UTDR	FU68xxLib\Outside\FU68xx_UART.h	/^sfr UTDR   = 0x99;$/;"	v
 __FU68XX_UART_H__	FU68xxLib\Outside\FU68xx_UART.h	2;"	d
 VREFCR	FU68xxLib\Outside\FU68xx_VREF.h	6;"	d
 __FU68XX_VREF_H__	FU68xxLib\Outside\FU68xx_VREF.h	2;"	d
+ADCRef	User\Hardware.h	18;"	d
+Amp	User\Hardware.h	19;"	d
+Amp_R1	User\Hardware.h	16;"	d
+Amp_R2	User\Hardware.h	17;"	d
+Angle_SensorToElectric	User\Hardware.h	12;"	d
+Correction	User\Hardware.h	24;"	d
+Criterion	User\Hardware.h	11;"	d
+HalfUQx	User\Hardware.h	26;"	d
+IMax	User\Hardware.h	23;"	d
+IRange	User\Hardware.h	20;"	d
+Pole	User\Hardware.h	8;"	d
+Q15	User\Hardware.h	5;"	d
+Sample	User\Hardware.h	15;"	d
+UQx	User\Hardware.h	25;"	d
+__HARDWARE_H__	User\Hardware.h	2;"	d
 Init	User\Init.c	/^void Init(void)$/;"	f
 __INIT_H__	User\Init.h	2;"	d
+time10ms	User\Interrupt.c	/^bool time10ms;$/;"	v
 time2ms	User\Interrupt.c	/^bool time2ms;$/;"	v
 time500ms	User\Interrupt.c	/^bool time500ms;$/;"	v
 __INTERRUPT_H__	User\Interrupt.h	2;"	d

@@ -5,7 +5,7 @@
 * @Date:               2017-04-01 23:45:04
 *
 * @Last Modified by:   Any
-* @Last Modified time: 2017-04-07 11:37:23
+* @Last Modified time: 2017-04-07 16:07:45
 */
 
 ///////////////////////////////////////////////////////////
@@ -33,38 +33,50 @@
 void main(void)
 {
     bool main2ms;
+    bool main500ms;
+
     uint16_t DatLast;
     uint16_t DatOut;
     uint16_t i = 0;
+    int16_t  Sin;
 
     Init();
+    Sin = SV_SIN;
 
     while (1)
     {
-        main2ms = time2ms;
+        main2ms   = time2ms;
+        main500ms = time500ms;
+
         if (main2ms)
         {
-            Shine_RGB(R_Pin);
-
             Read_ANG_AS5048();
             if (Angle_AS5048 != 0) DatLast = Angle_AS5048;
             DatOut = DatLast;
 
-            Shine_RGB(R_Pin);
 
             i = -Angle_SensorToElectric(DatOut);
-            Set_Theta(i);
+            Set_FOC_Theta(i);
 
 
             Load_ANO_Package((uint8_t)(DatOut >> 8));
             Load_ANO_Package((uint8_t)DatOut);
             Load_ANO_Package((uint8_t)(i >> 8));
             Load_ANO_Package((uint8_t)i);
-
             while (!Send_ANO_Package());
             Reset_ANO_Package(0xf1, DAT_LEN);
 
             time2ms = false;
+        }
+
+        if (main500ms)
+        {
+            Sin *= -1;
+            Set_FOC_QMax(Sin);
+            Set_FOC_QMin(Sin);
+            Set_FOC_QOut(Sin);
+
+            time500ms = false;
         }
     }
 }

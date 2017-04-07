@@ -80,7 +80,7 @@ void Init_FOC(void)
     TIM0DTR    = 24;                                            // Deadtime = 0x18/24MHZ = 1us
 
     //FOC
-    FOCSET0    = 0x80;                                                                   // enable FOC module
+    FOC_SET0    = 0x80;                                                                   // enable FOC module
 
     // Calibrate_FOC();
 

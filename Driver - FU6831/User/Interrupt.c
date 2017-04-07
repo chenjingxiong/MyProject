@@ -5,7 +5,7 @@
 * @Date:               2017-04-01 23:07:31
 *
 * @Last Modified by:   Any
-* @Last Modified time: 2017-04-06 18:02:27
+* @Last Modified time: 2017-04-07 13:39:23
 */
 
 ///////////////////////////////////////////////////////////
@@ -53,7 +53,6 @@ bool time2ms;
                 TimeCount = 0;
                 time500ms = true;
             }
-
 
             FlagClear_CTimer2(TIM_CR1_Flag_IF);
         }
