@@ -96,20 +96,6 @@ void Init_FOC(void)
     FOC_ARR    = PWM_FREC;                                           // set 16Khz carry frequency
     FOC_CMR    = 0x3f;
 
-    FOC_DMAX   = 0;
-    FOC_DMIN   = 0;
-    FOC_DKP    = 0;
-    FOC_DKI    = 0;
-    FOC_IDREF  = 0;
-
-    FOC_QMAX   = 16384;
-    FOC_QMIN   = 16384;
-    FOC_QKP    = 0;
-    FOC_QKI    = 0;
-    FOC_IQREF  = 0;
-
-    FOC_THETA  = 0;
-
     //Driver
     DRVOUT     = 0x80;
     #ifdef FU6831

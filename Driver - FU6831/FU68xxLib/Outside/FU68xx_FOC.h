@@ -110,8 +110,20 @@
  #define FOC_FLAG_FCIF          0x02
  #define FOC_FLAG_FUIF          0x01
 /*************************************************************************************///External Function
+ #define Set_DMax(a)            FOC_DMAX  = a
+ #define Set_DMin(a)            FOC_DMIN  = a
+ #define Set_DKp(a)             FOC_DKP   = a
+ #define Set_DKi(a)             FOC_DKI   = a
+ #define Set_DRef(a)            FOC_IDREF = a
 
- #define Set_Theta(a)           FOC_THETA    = a
+ #define Set_QMax(a)            FOC_QMAX  = a
+ #define Set_QMin(a)            FOC_QMIN  = a
+ #define Set_QKp(a)             FOC_QKP   = a
+ #define Set_QKi(a)             FOC_QKI   = a
+ #define Set_QRef(a)            FOC_IQREF = a
+
+ #define Set_Theta(a)           FOC_THETA = a
+
  extern void Init_FOC(void);
 
 #endif
